@@ -1,0 +1,65 @@
+
+/*DASHBOARD PAGE CSS*/
+.no-print{
+    display: none;
+}
+.black_menus li {
+    float: left;
+    padding: 0 14px;
+    list-style: none;
+}
+
+.black_menus li a {
+    color: #bbb;
+}
+.black_menus {
+    background-color: #565a5c;
+    padding: 10px 0;
+
+}
+.black_menus ul li :hover {
+
+    color:#fff;   
+}
+.flshmsg{
+    text-align: center;
+    width: 100%;
+    float: left;
+}
+/*END*/
+
+/*ATTENDANCE LIST PAGE CSS*/
+#classList {
+    margin: 0px 10px;
+}
+.users_grid_tools {
+    margin-bottom: 20px;
+}
+/*END*/
+
+/*ATTENDANCE DASHBOARD PAGE CSS*/
+.users_grid_tools {
+    margin-bottom: 20px;
+}
+/*END*/
+
+/*LC ATTENDANCE SUMMARY PAGE CSS*/
+.users_grid_tools {
+    margin-bottom: 20px;
+}
+thead.table_head {
+    background: #dcdcdc;
+}
+/*END*/
+
+
+
+
+/*LC ATTENDANCE SUMMARY PAGE CSS*/
+.users_grid_tools {
+    margin-bottom: 20px;
+}
+thead.table_head {
+    background: #dcdcdc;
+}
+/*END*/
