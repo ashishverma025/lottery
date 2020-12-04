@@ -3,12 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Category;
-use App\OnlinequestionPaper;
-use App\LearningcenterDetails;
 use App\User;
-use App\BecomeaTutor;
-use App\TeachSubject;
+use App\Betting;
 use Auth,
     DB;
 
@@ -29,16 +25,8 @@ class WelcomeController extends Controller {
 
         if (Auth::check()) {
             $userId = getUser_Detail_ByParam('id');
-            $LcDetails = LearningcenterDetails::where(['user_id' => $userId])->first();
         }
-        $totalTutors = User::where(['user_type'=>3])->get();
-        echo "<h1>Comming Soon<h1>";
-        // return view('sites.site-index', [
-        //     'LcDetails' => $LcDetails,
-        //     'practicePaper'=>[],
-        //     'totalTutors'=>$totalTutors,
-        //     'Subjects'=> []
-        // ]);
+        return view('sites.site-index');
     }
 
     public function index1() {
@@ -49,6 +37,19 @@ class WelcomeController extends Controller {
             $LcDetails = LearningcenterDetails::where(['user_id' => $userId])->first();
         }
         return view('sites.site-index1', ['LcDetails' => $LcDetails]);
+    }
+
+    public function game(Request $request, $betId) {
+        $LcDetails = [];
+        if (Auth::check()) {
+            $userId = getUser_Detail_ByParam('id');
+            $bettingDetails = Betting::where(['id' => $betId, 'status' => 'Active'])->get()->first()->toArray();
+//            pr($bettingDetails);
+            return view('sites.game', [
+                'bettingDetails' => $bettingDetails ? $bettingDetails : [],
+            ]);
+        }
+        return redirect('/');
     }
 
     public function rate_saler() {
@@ -65,15 +66,6 @@ class WelcomeController extends Controller {
             $LcDetails = LearningcenterDetails::where(['user_id' => $userId])->first();
         }
         return view('sites.privacyPolicy', ['LcDetails' => $LcDetails]);
-    }
-
-    public function termsOfService() {
-        $LcDetails = [];
-        if (Auth::check()) {
-            $userId = getUser_Detail_ByParam('id');
-            $LcDetails = LearningcenterDetails::where(['user_id' => $userId])->first();
-        }
-        return view('sites.termsOfService', ['LcDetails' => $LcDetails]);
     }
 
 }

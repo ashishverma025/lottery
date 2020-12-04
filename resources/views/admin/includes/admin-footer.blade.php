@@ -1,9 +1,9 @@
 <!-- /.content-wrapper -->
 <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-        <b>Version</b> 3.0.2-pre
+        <b>Version</b> 1.0.0-pre
     </div>
-    <strong>Copyright &copy; 2019-2020 <a href="{{ url('/')}}">Wippli</a>.</strong> All rights
+    <strong>Copyright &copy; 2020-2021 <a href="{{ url('/')}}">Lottery</a>.</strong> All rights
     reserved.
 </footer>
 
@@ -46,6 +46,16 @@
 <script src="{{ asset('public/student/dist/js/demo.js')}}"></script>
 <script src="{{ asset('public/student/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js')}}"></script>
 <script src="{{ asset('public/student/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css')}}"></script>
+
+<script src="{{URL::asset('public/admn/js/pluginjs/jquery.dataTables.min.js')}}"></script>
+<script src="{{URL::asset('public/admn/js/pluginjs/dataTables.bootstrap.min.js')}}"></script>
+<script src="{{URL::asset('public/admn/js/pluginjs/dataTables.responsive.min.js')}}"></script>
+<script src="{{URL::asset('public/admn/js/pluginjs/dataTables.buttons.min.js')}}"></script>
+<script src="{{URL::asset('public/admn/js/pluginjs/buttons.colVis.min.js')}}"></script>
+<script src="{{URL::asset('public/admn/js/pluginjs/buttons.html5.min.js')}}"></script>
+<script src="{{URL::asset('public/admn/js/pluginjs/buttons.bootstrap.min.js')}}"></script>
+<script src="{{URL::asset('public/admn/js/pluginjs/buttons.print.min.js')}}"></script>
+
 
 
 <script>

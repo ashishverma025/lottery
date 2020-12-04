@@ -1,8 +1,8 @@
 <footer class="main-footer">
-    <strong>Copyright &copy; 2019-2020 <a href="http://adminlte.io">LatestLara</a>.</strong>
+    <strong>Copyright &copy; 2020-2021 <a href="http://adminlte.io">Lottery</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 3.0.2-pre
+        <b>Version</b> 1.0.0-pre
     </div>
 </footer>
 
@@ -111,7 +111,7 @@ $(function () {
                                 <label for="text">Profile Image:</label>
                             </div>
                             <div class="col-md-6">
-                                <img src="{{ url('admin/images/profile/') }}/{{$user->profile_image  ?? 'avatar.png' }}" id="profileImg" height="75" width="80" src="#" alt="your image"/>
+                                <img src="{{ url('public/admin/images/profile/') }}/{{$user->profile_image  ?? 'avatar.png' }}" id="profileImg" height="75" width="80" src="#" alt="your image"/>
                             </div>
                         </div>
                         <div class="row">

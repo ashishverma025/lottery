@@ -1,0 +1,121 @@
+<div class="ins-details">
+    <!--div class="inst-line inst ins-line-one">
+        <h2>[APImeta id="59829" name="symbol"]</h2>
+        <p class="inst-desc">[APImeta id="59829" name="description"]</p>
+        <div class="instrument"><p>Forex spot</p></div>
+    </div-->
+	<h2 class="topamount">1.91058^<sub>-0.18%</sub></h2>
+	<div class="buysellbox">
+		<h2 class="buyleft" id="quote.Direction">[bid id="EURUSD"] <span class="green">BUY</span></h2>
+		<h2 class="sellright" id="quote.Direction">[ask id="EURUSD"] <span class="red">SELL</span></h2>
+	</div>
+	<div class="lowhighcount">
+		<p class="lowhigh"><span class="lowred">Low</span> <span class="highgreen">High</span></p>
+		<p class="count"><span class="usdred">[low_shortcode pair="EURUSD"]</span> <span class="usdgreen">[high_shortcode pair="EURUSD"]</span></p>
+	</div>
+	<div class="row otherpopular">
+		<div class="col-md-12">
+			<div class="col-md-6 text">
+				<p>Other Popular Currency Pairs:</p>
+			</div>
+			<div class="col-md-6 form">
+				<!--select class="form-control" name="aud" id="aud" form="carform">
+					<option value="AUD 150">AUD 150</option>
+					<option value="AUD 200">AUD 200</option>
+					<option value="AUD 250">AUD 250</option>
+					<option value="AUD 300">AUD 300</option>
+				</select-->
+				<div class="sentiment-line">
+					[inst_buttons]
+				</div>
+			</div>
+		</div>
+	</div>
+    <!--div class="ins-line inst ins-line-one">
+		<div class="bid-direction direction-color bid">
+			<div class="change inst">
+				<p>[change_24h id="59829"]</p>
+				<span><p id="diference"></p></span>
+			</div>
+		</div>
+    </div-->
+</div>
+<script>
+
+var high = [high_shortcode pair="EURUSD"];
+var low = [low_shortcode pair="EURUSD"];
+var res = high-low;
+// document.getElementById("diference").innerHTML = res.toFixed(5);
+// var direction = [bid id="EURUSD"] === 1 ? 'up' : 'down';
+// $el.css('color', [bid id="EURUSD"] === 1 ? 'red' : 'blue');
+// document.getElementById("quote.Direction").innerHTML = "";
+
+// $ell.css('color', [bid id="EURUSD"] === 1 ? 'rgba(0, 255, 0, 0.3)' : 'rgba(255, 0, 0, 0.3)');
+
+ 
+                    // if ([bid id="EURUSD"] === 1) {
+                    //     var color = "#458aff"; 
+                    // } else {
+                    //     var color = "#ff0000";  
+                    // }
+
+  </script>
+<style>
+.ins-details { display: flex;  flex-wrap: wrap; } 
+.ins-line-one { box-sizing: border-box; width: 100%; }  
+h2.topamount { font-size: 22px; color: #57af99; border-bottom: 1px solid #ccc; padding-bottom: 15px; width: 100%; }
+h2.topamount sub { color: #ac919a; }
+.buysellbox { display: contents; width: 100%; }
+.buysellbox h2.buyleft { width: 49%; float: left; font-size: 20px; color: #fff; background: #29a038; margin-right: 2%; padding: 0; line-height: inherit; margin-top: 0px !important; height: 45px; }
+.buysellbox h2.buyleft span.EURUSD-bid { padding: 10px 15px; float: left; background: #2eb043; color: #fff; width: 74%; text-align: center; font-size: 30px; height: 45px; line-height: 27px; font-weight: 400; }
+.buysellbox h2.buyleft span.green { padding: 10px 15px; background: #29a038; float: right; font-size: 12px; font-weight: 400; line-height: 27px; text-align: center; width: 70px; height: 45px; }
+.buysellbox h2.sellright { width: 49%; float: right; font-size: 20px; color: #fff; background: #de142a; padding: 0; line-height: inherit; margin-top: 0px !important; height: 45px; }
+.buysellbox h2.sellright span.EURUSD-ask { padding: 10px 15px; float: left; background: #ea1f25; color: #fff; width: 73%; text-align: center; font-size: 30px; height: 45px; line-height: 27px; font-weight: 400; }
+.buysellbox h2.sellright span.red { padding: 10px 15px; background: #de142a; float: right; font-size: 12px; font-weight: 400; line-height: 27px; text-align: center; width: 70px; height: 45px;}
+
+.lowhighcount { width: 100%; float: left; }
+.lowhighcount .lowhigh { width: 100%; float: left; margin: 0; }
+.lowhighcount .lowhigh span.lowred { width: 50%; float: left; text-align: left; font-size: 14px; font-weight: 600;  }
+.lowhighcount .lowhigh span.highgreen { width: 50%; float: right; text-align: right; font-size: 14px; font-weight: 600; } 
+.lowhighcount .count { width: 100%; float: left; }
+.lowhighcount .count span.usdred { width: 50%; float: left; text-align: left; font-size: 20px; color: #de142a; }
+.lowhighcount .count span.usdgreen { width: 50%; float: right; text-align: right; font-size: 20px; color: #29a038;}
+
+.otherpopular { width: 100%; margin-top: 50px; }
+.otherpopular .col-md-12 { padding: 0; }
+.otherpopular .text { }
+.otherpopular .text p { font-size: 16px; padding: 10px 0; font-weight: 600; color: #333; }
+
+.otherpopular .form { padding-right: 0px; }
+.otherpopular select { width: 100% !important; }
+.otherpopular select option { }
+.otherpopular .select2-container--default .select2-selection--single { background: #fff; height: 40px; }
+.otherpopular .select2-container--default .select2-selection--single .select2-selection__rendered { font-size: 18px; line-height: 40px; }
+
+
+.inst { display: flex; flex-direction: column; } 
+.ins-line h2, .inst-line h2 { margin: 0px; display: block; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold; color: #444; } 
+.inst-desc { font-size: 1.3em; position: relative; top: -0.5em; }
+.instrument { font-size: 0.75em; color: rgb(147, 149, 151);  display: inline-block; font-weight: 300; position: relative; line-height: 1.2em; } 
+.instrument * {  line-height: 1.2em; } 
+.bid { display: flex; -webkit-box-pack: start;  justify-content: flex-start; }
+.change { font-size: 2.25em; padding-top: 0.6em;  margin-left: 0.3em; }
+.change p { font-size: 0.75em;  padding-top: 0.5em; margin-left: 0.2em; vertical-align: middle; font-weight: 700; }
+
+
+@media screen and (min-width: 768px) {
+  .ins-line { text-align: right; }
+}
+@media screen and (max-width: 767px) {
+  .ins-line { margin-top: 1em; }
+}
+@media screen and (min-width: 48em) {
+  .bid { -webkit-box-pack: end; justify-content: flex-end; }
+}
+@media screen and (min-width: 48em) {
+  .ins-data { width: 100%; 
+}
+@media screen and (min-width: 64em) {
+  .ins-data { width: 33.3333%; }
+}
+</style>

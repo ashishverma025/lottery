@@ -42,11 +42,11 @@ $segment3 = Request::segment(3);
                     </a>
                 </li>
 
-                <li class="nav-item has-treeview {{$segment2=='user_list'?'menu-open':""}}">
-                    <a href="#" class="nav-link {{$segment2=='user_list'?'active':""}}">
+                <li class="nav-item has-treeview {{$segment2=='user'?'menu-open':""}}">
+                    <a href="#" class="nav-link {{$segment2=='user'?'active':""}}">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
-                            Users
+                            User Management
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
@@ -58,152 +58,43 @@ $segment3 = Request::segment(3);
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('admin/user/create')}}" class="nav-link {{$segment3=='lc'?'active':""}}">
+                            <a href="{{url('admin/user/create')}}" class="nav-link {{$segment3=='create'?'active':""}}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Add User</p>
                             </a>
                         </li>
-<!--                         <li class="nav-item">
-                            <a href="{{url('admin/user_list/student')}}" class="nav-link {{$segment3=='student'?'active':""}}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Students</p>
-                            </a>
-                        </li> -->
+
                     </ul>
                 </li>
-
-                <!-- <li class="nav-item">
-                    <a href="{{url('admin/institute')}}" class="nav-link">
-                        <i class="nav-icon fas fa-book-reader"></i>
+                <li class="nav-item has-treeview {{$segment2=='betting'?'menu-open':""}} {{$segment2=='addBetting'?'menu-open':""}}">
+                    <a href="#" class="nav-link {{$segment2=='betting'?'active':""}}">
+                        <i class="nav-icon fas fa-users"></i>
                         <p>
-                            Institute
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{url('admin/subject')}}" class="nav-link">
-                        <i class="nav-icon fas fa-book-reader"></i>
-                        <p>
-                            Subjects
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{url('admin/teachSubject')}}" class="nav-link">
-                        <i class="nav-icon fas fa-book-reader"></i>
-                        <p>
-                            Teach Subjects
-                        </p>
-                    </a>
-                </li> -->
-               <!--  <li class="nav-item">
-                    <a href="{{url('admin/Syllabus')}}" class="nav-link">
-                        <i class="nav-icon fas fa-book-reader"></i>
-                        <p>
-                            Syllabus
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{url('admin/plan')}}" class="nav-link">
-                        <i class="nav-icon fas fa-book-reader"></i>
-                        <p>
-                            Plan
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-chalkboard-teacher"></i>
-                        <p>
-                            Classes
+                            Betting Management
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{url('#')}}" class="nav-link">
+                            <a href="{{url('admin/betting')}}" class="nav-link {{$segment2=='betting'?'active':""}}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Classes</p>
+                                <p>Bet List</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('#')}}" class="nav-link">
+                            <a href="{{url('admin/addBetting')}}" class="nav-link {{$segment2=='addBetting'?'active':""}}">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Assign Class To Student</p>
+                                <p>Add New Bet</p>
                             </a>
                         </li>
+                        <!--                         <li class="nav-item">
+                                                    <a href="{{url('admin/user_list/student')}}" class="nav-link {{$segment3=='student'?'active':""}}">
+                                                        <i class="far fa-circle nav-icon"></i>
+                                                        <p>Students</p>
+                                                    </a>
+                                                </li> -->
                     </ul>
                 </li>
- -->
-
-               <!--  <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-chalkboard-teacher"></i>
-                        <p>
-                            Online Practice
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{url('admin/question')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Questions</p>
-                            </a>
-                            <a href="{{url('admin/practicePaper')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Practice Paper</p>
-                            </a>
-                            <a href="{{url('admin/studentData')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Student Record</p>
-                            </a>
-                            <a href="{{url('admin/subscription')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Subscription</p>
-                            </a>
-
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="{{url('admin/subscriber')}}" class="nav-link">
-                        <i class="nav-icon fas fa-book-reader"></i>
-                        <p>
-                            Subscriber
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-list"></i>
-                        <p>
-                            Attendances
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{url('#')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Save Attendances</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{url('#')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Attendance List</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{url('#')}}" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Attendance Summary</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>    -->        
 
                 <li class="nav-item">
                     <a href="{{url('logout')}}" class="nav-link">

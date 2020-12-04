@@ -34,6 +34,11 @@
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
         <script src="{{ asset('public/student/plugins/jquery/jquery.min.js')}}"></script>
 
+        
+        
+        <link href="{{URL::asset('public/admn/css/select2.min.css')}}" rel="stylesheet">
+<link href="{{URL::asset('public/admn/css/plugincss/dataTables.bootstrap.css')}}" rel="stylesheet">
+<link href="{{URL::asset('public/admn/css/pages/tables.css')}}" rel="stylesheet">
         <style>
             /*.errMsg{
                 color: red;

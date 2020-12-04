@@ -30,7 +30,7 @@ use AuthenticatesUsers;
      * @var string
      */
 //    protected $redirectTo = '/home';
-    protected $redirectTo = 'lc/dashboard';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -124,7 +124,7 @@ use AuthenticatesUsers;
         Auth::logout();
         $request->session()->flush();
         $request->session()->regenerate();
-        return redirect('/admin/login')->with('status', 'User has been logged out!');
+        return redirect('/')->with('status', 'User has been logged out!');
     }
 
 }

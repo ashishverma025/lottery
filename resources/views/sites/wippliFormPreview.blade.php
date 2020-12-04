@@ -21,7 +21,7 @@
                   <div class="col-lg-12">
                      <div class="form-txt boomi_txt">
                         <em>Dell Boomi - Australia</em>
-                        <h3>Task: Forrester Banners - adjust</h3>
+                        <h3>Task: {{$NewWippli->business_name}}</h3>
                         <span>
                            <p>VQ</p>
                            Vicky Quinlan - Marketing

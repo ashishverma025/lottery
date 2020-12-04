@@ -1,0 +1,92 @@
+<div class="dashboard__analytic-cards">
+	<div class="grid">
+		<div class="column quarter">
+			<div class="stats1 top-row1 row">
+				<div class="col-md-4 item">
+					<p>CLASSIC<b> $0 </b></p>
+				</div>
+				<div class="col-md-4 item">
+					<p>PRO<b> $3 </b></p>
+				</div>
+				<div class="col-md-4 item">
+					<p>VIP<b> $1.5 </b></p>
+				</div>
+			</div>
+			<div class="stats1">
+				<h4>Commission per lot (single side)</h4>
+			</div>
+		</div>
+		<div class="column quarter">
+			<div class="tablecard table-responsive">
+				<table class="table">
+					<tr>
+						<td class="left">Opening Time</td>
+						<td class="green right">
+							[open_time group="forex"]
+						</td>
+					</tr>
+					<tr>
+						<td class="left">Closing Time</td>
+						<td class="red right">
+							[close_time group="forex"]
+						</td>
+					</tr>
+					<tr>
+						<td class="left">Server Time</td>
+						<td class="black right">
+							[timezone_setting]
+						</td>
+					</tr>
+					<tr>
+						<td class="left">Trading Hours</td>
+						<td class="stats view-count right">
+							[get_pause group="forex"]
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+			
+			<div class="trading">
+				<a href="#" class="tradingbtn">Start Trading Now<i class="fa fa-chevron-right"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+<style>
+
+.stats1 { width: 100%; text-align: center;  font-weight: 700; padding: 0;  margin: 0; padding-bottom: 1pc; border-bottom: 1px solid #dee6e8; }
+.stats1.top-row1 {  width: 100%; text-align: center; font-weight: 700;   padding: 0; margin: 0; padding-bottom: 1px; border-bottom: 1px solid #dee6e8; margin-bottom: 15px; }
+.stats1 .item { }
+.stats1 .item p {  font-size: 14px; text-align: center; font-size: 18px;  font-weight: 400; margin: 0; }
+.stats1 .item p b { color: #0063a6; font-weight: 500; }
+.stats1 h4 { margin: 0 !important; padding: 0; font-size: 14px; color: #333; }
+
+.tablecard { }
+.tablecard .table { }
+.tablecard .table tr { border: 0px; border-bottom: 1px solid #ccc; }
+.tablecard .table tr td { border: 0px; padding: 15px 0px; font-size: 14px; color: #333; font-weight: 500; width: 50% }
+.tablecard .table tr td.green { color: #028002; }
+.tablecard .table tr td.red { color: #de142a; }
+.tablecard .table tr td.black { }
+.tablecard .table tr td.right { text-align: right; }
+
+.trading { text-align: center; padding: 20px 0; }
+.trading .tradingbtn { font-size: 14px; background: #85bf31;  padding: 10px 80px 10px 35px; position: relative; }
+.trading .tradingbtn:hover { color: #fff; }
+.trading .tradingbtn i { position: absolute; right: 0; width: 40px; height: 40px;  top: 0; background: #54860b; line-height: 41px; text-align: center; }
+
+
+
+@media only screen and (min-width: 600px) {
+
+.half, .quarter, .third, .two-quarters { -webkit-box-flex: 1; flex: 1 1 50%; }
+
+}
+
+@media only screen and (min-width: 800px) {
+
+.quarter { -webkit-box-flex: 0; flex: 0 1 100%; max-width: 100%; }
+
+}
+</style>

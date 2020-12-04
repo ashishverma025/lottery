@@ -1,8 +1,4 @@
 @include('admin/includes.admin-head')
-<link href="{{URL::asset('public/admn/css/select2.min.css')}}" rel="stylesheet">
-<link href="{{URL::asset('public/admn/css/plugincss/dataTables.bootstrap.css')}}" rel="stylesheet">
-<link href="{{URL::asset('public/admn/css/pages/tables.css')}}" rel="stylesheet">
-<!-- /.navbar -->
 @include('admin/includes.admin-sidebar')
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -62,11 +58,11 @@
                                                             <input type="file" name="csv_student" id="csv_student" class="inputfile inputfile-6" data-multiple-caption="{count} files selected" multiple />
                                                             <label for="csv_student"><span></span> <strong><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg> SELECT CSV</strong></label>
                                                             <button type="button" id="upload_students" class=" btn btn-default upld-csv">
-                                                                <img src="{{url('public/ajax-loader.gif')}}" id="ajax-loaderimg" height="20" width="20" style="display: none">
+                                                                <img src="{{url('ajax-loader.gif')}}" id="ajax-loaderimg" height="20" width="20" style="display: none">
                                                                 Upload Student
                                                             </button>
                                                             <div class="btn-group users_grid_tools">
-                                                                <a href="{{asset('public/students.csv')}}" download class=" btn btn-default" ><i class="fa fa-download" title="CSV Format"></i></a>
+                                                                <a href="{{asset('students.csv')}}" download class=" btn btn-default" ><i class="fa fa-download" title="CSV Format"></i></a>
                                                                 <div class="tools"></div>
                                                             </div>
                                                         </div>
@@ -117,14 +113,7 @@
     <!-- /.content -->
 </div>
 @include('admin/includes.admin-footer')
-<script src="{{URL::asset('public/admn/js/pluginjs/jquery.dataTables.min.js')}}"></script>
-<script src="{{URL::asset('public/admn/js/pluginjs/dataTables.bootstrap.min.js')}}"></script>
-<script src="{{URL::asset('public/admn/js/pluginjs/dataTables.responsive.min.js')}}"></script>
-<script src="{{URL::asset('public/admn/js/pluginjs/dataTables.buttons.min.js')}}"></script>
-<script src="{{URL::asset('public/admn/js/pluginjs/buttons.colVis.min.js')}}"></script>
-<script src="{{URL::asset('public/admn/js/pluginjs/buttons.html5.min.js')}}"></script>
-<script src="{{URL::asset('public/admn/js/pluginjs/buttons.bootstrap.min.js')}}"></script>
-<script src="{{URL::asset('public/admn/js/pluginjs/buttons.print.min.js')}}"></script>
+
 
 <script>
 //Bootstrap Duallistbox

@@ -26,6 +26,7 @@ Route::post('/sign-in', 'Auth\RegisterController@signIn');
 Route::get('/facebook-login', 'SocialAuthFacebookController@redirect');
 Route::get('/facebook-callback', 'SocialAuthFacebookController@callback');
 Route::get('/', 'WelcomeController@landing_index');
+Route::get('/game/{id?}', 'WelcomeController@game');
 
 Auth::routes(['verify' => true]);
 
@@ -78,23 +79,13 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function() {
     Route::get('/user/destroy/{id}', 'UserController@destroy');
     Route::get('/fetchUsers', 'UserController@fetchUsers');
 
-    /* Subscription Route */
-    Route::get('/subscription', 'SubscriptionController@index');
-    Route::get('/fetchSubscription', 'SubscriptionController@fetchSubscription');
-    Route::get('/addSubscription', 'SubscriptionController@saveSubscription');
-    Route::post('/addSubscription', 'SubscriptionController@saveSubscription');
-    Route::get('/addSubscription/{id?}', 'SubscriptionController@saveSubscription');
-    Route::get('/deleteSubscription/{id?}', 'SubscriptionController@deleteSubscription');
-
-
-    /* Subscriber Route */
-    Route::get('/subscriber', 'SubscriberController@index');
-    Route::get('/fetchSubscriber', 'SubscriberController@fetchSubscriber');
-    Route::get('/addSubscriber', 'SubscriberController@saveSubscriber');
-    Route::post('/addSubscriber', 'SubscriberController@saveSubscriber');
-    Route::get('/addSubscriber/{id?}', 'SubscriberController@saveSubscriber');
-    Route::get('/deleteSubscriber/{id?}', 'SubscriberController@deleteSubscriber');
-
+    
+    /* Betting Route */
+    Route::get('/betting', 'BettingController@index');
+    Route::get('/fetchBetting', 'BettingController@fetchBetting');
+    Route::any('/addBetting/{id?}', 'BettingController@saveBetting');
+    
+   
     Route::get('/edit/{id?}', 'UserController@edit');
     Route::post('/uploadstudents', 'UserController@uploadStudentByCsv');
     Route::get('/dashboard', 'HomeController@index')->name('home')->middleware('guard.verified:admin,admin.verification.notice');
@@ -120,8 +111,6 @@ Route::post('/updateprofile', 'UsersController@updateProfile');
 Route::post('/getSubjectSyllabusListById', 'UsersController@getSubjectSyllabusListById');
 Route::get('becomeaeducation_partner/{type?}', 'UsersController@becomeaEducationPartner')->middleware('verified');
 Route::post('/learningcenter', 'UsersController@createLearningCenter');
-// Route::get('/lc/dashboard', 'LearningCenterController@dashboard')->middleware('verified');
-Route::get('/lc/dashboard', 'student\DashboardController@index')->middleware('verified');
 
 
 /* ----------------------- Online Practice -------------------------------- */
