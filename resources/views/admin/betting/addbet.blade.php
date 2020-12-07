@@ -85,18 +85,26 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label> Announce winning number</label>
-                                    <input type="number" id="announce_winning_number" class="form-control" name="announce_winning_number" autocomplete="off" value="<?= @$BettingDetails->announce_winning_number; ?>" placeholder="Announce winning number" required>
+                                    <select class="form-control" name="announce_winning_number" id="gender">
+                                        <option <?= (@$BettingDetails->announce_winning_number == 'No') ? 'selected' : '' ?>>No</option>
+                                        <option <?= (@$BettingDetails->announce_winning_number == 'Yes') ? 'selected' : '' ?>>Yes</option>
+                                    </select> 
                                 </div>
                             </div>
 
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Number Length</label>
-                                    <input type="number" id="number_length" class="form-control" name="number_length" autocomplete="off" value="<?= @$BettingDetails->number_length; ?>" placeholder="Number Length" required>
+                                    <select class="form-control" name="number_length" id="number_length">
+                                        <option <?= (@$BettingDetails->number_length == '2') ? 'selected' : '' ?>>2</option>
+                                        <option <?= (@$BettingDetails->number_length == '3') ? 'selected' : '' ?>>3</option>
+                                        <option <?= (@$BettingDetails->number_length == '4') ? 'selected' : '' ?>>4</option>
+                                        <option <?= (@$BettingDetails->number_length == '5') ? 'selected' : '' ?>>5</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -104,9 +112,10 @@
                                     <select class="form-control" name="status" id="gender">
                                         <option <?= (@$BettingDetails->status == 'active') ? 'selected' : '' ?>>Active</option>
                                         <option <?= (@$BettingDetails->status == 'inactive') ? 'selected' : '' ?>>Inactive</option>
-                                    </select>                                </div>
+                                    </select>  
+                                </div>
                             </div>
-                            
+
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label></label>
@@ -116,7 +125,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                     </form>
                 </div>
             </div>

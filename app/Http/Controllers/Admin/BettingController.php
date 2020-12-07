@@ -67,7 +67,15 @@ class BettingController extends Controller {
                         . ' class="delete hidden-xs hidden-sm" title="Delete"'
                         . 'onclick=\'return confirm("Are you sure you want to delete this user?")\'>'
                         . '<i class="fa fa-trash text-danger"></i></a>';
-                $response['aaData'][$k] = [$k + 1, $inst->bet_name,$inst->bet_date,$inst->start_number,$inst->end_number,$inst->winning_amount,$inst->winning_amount,$inst->announce_winning_number, $status, $action];
+               
+                $awn = $inst->announce_winning_number;
+                $statusCls = ($awn == 'No'? 'danger':'success');
+                $announce_winning_number = ' <a href="announceWinningNumber/' . $inst->id . '"'
+                        . ' class="delete hidden-xs hidden-sm" title="Announce Number"'
+                        . 'onclick=\'return confirm("Are you sure you want to announce winning number?")\'>'
+                        . '<i class="fa fa-bullhorn text-'.$statusCls.'"></i> '.$awn.' </a>';
+                
+                $response['aaData'][$k] = [$k + 1, $inst->bet_name,$inst->bet_date,$inst->start_number,$inst->end_number,$inst->winning_amount,$inst->winning_amount,$announce_winning_number, $status, $action];
                 $k++;
             }
         }
@@ -121,6 +129,19 @@ class BettingController extends Controller {
             }
         }
         return redirect('/');
+    }
+
+    public function announceWinningNumber($id) {
+        try {
+            $Betting = Betting::findOrFail($id);
+            $Betting->announce_winning_number = 'Yes';
+            $Betting->update();
+            set_flash_message('Announce Winning Number updated successfully.', 'alert-success');
+            return redirect('/admin/betting');
+        } catch (Exception $ex) {
+            return Redirect::back()->with('error', 'Some error occur!! Please try again.');
+            set_flash_message('Some error occur!! Please try again.', 'alert-danger');
+        }
     }
 
     public function deleteBetting($id) {

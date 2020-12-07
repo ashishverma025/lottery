@@ -26,7 +26,8 @@ Route::post('/sign-in', 'Auth\RegisterController@signIn');
 Route::get('/facebook-login', 'SocialAuthFacebookController@redirect');
 Route::get('/facebook-callback', 'SocialAuthFacebookController@callback');
 Route::get('/', 'WelcomeController@landing_index');
-Route::get('/game/{id?}', 'WelcomeController@game');
+Route::get('/bet/{id?}', 'WelcomeController@bet');
+Route::get('/bet_list/{id?}', 'WelcomeController@betList');
 
 Auth::routes(['verify' => true]);
 
@@ -84,6 +85,8 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function() {
     Route::get('/betting', 'BettingController@index');
     Route::get('/fetchBetting', 'BettingController@fetchBetting');
     Route::any('/addBetting/{id?}', 'BettingController@saveBetting');
+    Route::any('/deleteBetting/{id?}', 'BettingController@deleteBetting');
+    Route::any('/announceWinningNumber/{id?}', 'BettingController@announceWinningNumber');
     
    
     Route::get('/edit/{id?}', 'UserController@edit');

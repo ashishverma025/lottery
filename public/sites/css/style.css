@@ -202,5 +202,44 @@ border-radius: 4px;  border-width: 2px; border-style: solid; background: rgb(255
 }
 
 
+/*/ BETTING DETAIL PAGE CSS START /*/
+.innerbanner { min-height: 300px; object-fit: cover; background-size: 100% 125% !important; }
+.gameplay { padding: 80px 0; }
+.gameplay .gameplayinner { box-shadow: 3px 5px 20px 3px rgba(0,0,0,.2); border-radius: 10px; padding: 30px; }
+.gameplay .gameplayinner .gameplayinnerleft  { }
+.gameplay .gameplayinner .gameplayinnerleft  h2 { }
+.gameplay .gameplayinner .gameplayinnerleft  p { font-size: 14px; font-weight: 600; }
+.gameplay .gameplayinner .gameplayinnerleft  .numberbox { background: #eae5e5; padding: 5px; border-radius: 10px; margin-top: 30px; }
+.gameplay .gameplayinner .gameplayinnerleft  .numberbox span { width: 30px; height: 30px; display: inline-block; text-align: center; margin: 6px;
+background: #9c820f; line-height: 30px; color: #fff; border-radius: 50%; font-size: 12px; }
+.gameplay .gameplayinner .gameplayinnerleft  .numberbox .seltd {background: gray}
 
-*/
+
+
+.gameplay .gameplayinner .gameplayinnerright { }
+.gameplay .gameplayinner .gameplayinnerright h2 { display: inline-block; width: 100%; }
+.gameplay .gameplayinner .gameplayinnerright h2 i { font-size: 25px; float: right; margin-top: 50px;visibility: hidden; }
+.gameplay .gameplayinner .gameplayinnerright .gamedetails { display: block; }
+.gameplay .gameplayinner .gameplayinnerright .gamedetails .gamedetailssingle { display: flex; border-bottom: 1px solid #ccc; padding: 15px 0; }
+.gameplay .gameplayinner .gameplayinnerright .gamedetails .gamedetailssingle .imagezig  { width: 100px; padding: 0 15px; }
+.gameplay .gameplayinner .gameplayinnerright .gamedetails .gamedetailssingle .imagezig  img { width: 60px;margin-top: 15px; }
+.gameplay .gameplayinner .gameplayinnerright .gamedetails .buttonround { width: 400px; display: flex;margin-top: 21px;}
+.gameplay .gameplayinner .gameplayinnerright .gamedetails .buttonround .round { width: 35px; height: 35px; background: #ccc;  margin: 0 10px 0 0; border-radius: 50%; display: inline-block;line-height: 35px;text-align: center; }
+.gameplay .gameplayinner .gameplayinnerright .gamedetails .increasedecrease { width: 200px; }
+.gameplay .gameplayinner .gameplayinnerright .gamedetails .increasedecrease p { font-size: 12px; display: block; text-align: center; }
+.gameplay .gameplayinner .gameplayinnerright .gamedetails .increasedecrease .increasebuttons { display: flex; }
+.gameplay .gameplayinner .gameplayinnerright .gamedetails .increasedecrease .increasebuttons .decrease { width: 25px; height: 25px; background: #9c820f; display: block; text-align: center; line-height: 25px; border-radius: 50%; color: #fff; margin-top: 5px; }
+.gameplay .gameplayinner .gameplayinnerright .gamedetails .increasedecrease .increasebuttons .value { width: 100px; margin: 0 10px; display: inline; background: #9c820f; border: 0;  text-align: center; padding: 7px 0; color: #fff;  float: left; }
+.gameplay .gameplayinner .gameplayinnerright .gamedetails .increasedecrease .increasebuttons .increase { width: 25px; height: 25px; background: #9c820f; display: block; text-align: center; line-height: 25px; border-radius: 50%; color: #fff; margin-top: 5px; }
+
+.gameplay .gameplayinner .gameplayinnerright .closeitem { width: 100px; display: inline-flex;  }
+.gameplay .gameplayinner .gameplayinnerright  .closeitem span { float: right; text-align: right; flex: auto; opacity: 0.6; font-size: 20px; }
+.gameplay .gameplayinner .gameplayinnerright  .closeitem span i {  }
+
+.gameplay .gameplayinner .morelines { visibility: hidden; width: 200px; background: #9c820f; border-radius: 5px;  padding: 5px; text-align: center; color: #fff; margin: 20px 20px; }
+.gameplay .gameplayinner .morelines i { margin-right: 5px; }
+.gameplay .gameplayinner .buy { width: 300px; text-align: center; background: red;  margin: 0 auto; line-height: 20px; font-size: 24px; padding: 20px 0;
+border-radius: 7px; color: #fff; }
+.gameplay .gameplayinner .buy span { font-size: 14px; line-height: 12px; padding-top: 20px; }
+.gameplay .gameplayinner .maximum { text-align: center; font-size: 14px; }
+/*/ BETTING DETAIL PAGE CSS END /*/

@@ -39,17 +39,24 @@ class WelcomeController extends Controller {
         return view('sites.site-index1', ['LcDetails' => $LcDetails]);
     }
 
-    public function game(Request $request, $betId) {
+    public function bet(Request $request, $betId = null) {
         $LcDetails = [];
         if (Auth::check()) {
             $userId = getUser_Detail_ByParam('id');
-            $bettingDetails = Betting::where(['id' => $betId, 'status' => 'Active'])->get()->first()->toArray();
+            $bettingDetails = Betting::where(['id' => $betId, 'status' => 'Active'])->get()->first();
 //            pr($bettingDetails);
-            return view('sites.game', [
+            return view('sites.bet', [
                 'bettingDetails' => $bettingDetails ? $bettingDetails : [],
             ]);
         }
         return redirect('/');
+    }
+
+    public function betList() {
+        $bettingDetails = Betting::where(['status' => 'Active'])->get();
+        return view('sites.bet-list', [
+            'bettingDetails' => $bettingDetails ? $bettingDetails : [],
+        ]);
     }
 
     public function rate_saler() {

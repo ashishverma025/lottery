@@ -35,24 +35,24 @@
                     <div class="modal-body">
                         <div id="socialSignup">
                             <div id="model1" class="model1">
-<!--                                <div class="col-sm-12">
-                                    <a href="{{ url('/login/facebook') }}" class="btn-facebook">
-                                        <span class="icon-container"><i class="fa fa-facebook"></i></span>
-                                        <span class="text-container">Continue with Facebook</span>
-                                    </a>
-                                </div>
-                                <div class="col-sm-12">
-                                    <a href="https://tutify.com.sg/home/g_sign_in" class="btn-google">
-                                        <span class="icon-container g-icon"><img src="{{url('public/sites/images/google_icon.png')}}"></span>
-                                        <span class="text-container continueee">Continue with Google</span>
-                                    </a>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="signup-or-separator">
-                                        <span class="h6 signup-or-separator--text">or</span>
-                                        <hr>
-                                    </div>
-                                </div>-->
+                                <!--                                <div class="col-sm-12">
+                                                                    <a href="{{ url('/login/facebook') }}" class="btn-facebook">
+                                                                        <span class="icon-container"><i class="fa fa-facebook"></i></span>
+                                                                        <span class="text-container">Continue with Facebook</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-sm-12">
+                                                                    <a href="https://tutify.com.sg/home/g_sign_in" class="btn-google">
+                                                                        <span class="icon-container g-icon"><img src="{{url('public/sites/images/google_icon.png')}}"></span>
+                                                                        <span class="text-container continueee">Continue with Google</span>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-sm-12">
+                                                                    <div class="signup-or-separator">
+                                                                        <span class="h6 signup-or-separator--text">or</span>
+                                                                        <hr>
+                                                                    </div>
+                                                                </div>-->
                                 <div class="col-sm-12">
                                     <a href="#" class="btn-google signup_with_email" id="signupForm">
                                         <span id="signup_with_email" class="icon-container g-icon">
@@ -90,12 +90,12 @@
                         <form class="form-inline" action="{{url('register')}}" id="manualSignup" method="post" style="display: none">
                             @csrf
                             <!--<h6 class="btn-google">Sign up with <span>Facebook</span> or <span>Google</span></h6>-->
-<!--                            <div class="col-sm-12">
-                                <div class="signup-or-separator">
-                                    <span class="h6 signup-or-separator--text">or</span>
-                                    <hr>
-                                </div>
-                            </div>-->
+                            <!--                            <div class="col-sm-12">
+                                                            <div class="signup-or-separator">
+                                                                <span class="h6 signup-or-separator--text">or</span>
+                                                                <hr>
+                                                            </div>
+                                                        </div>-->
                             <div class="col-sm-12">
                                 <div class="form-field">
                                     <div class="alert alert-dismissible text-center" id="server_resposne" style="display: none;">
@@ -264,26 +264,26 @@
                                 <button type="button" class="btn-dismiss-modal" data-dismiss="modal">&times;</button>
                             </div>
                             <div class="modal-body">
-<!--                                <div class="col-sm-12">
-                                    <a href='{{ url('/facebook-login') }}' class='btn-facebook'>
-                                        <span class="icon-container"><i class="fa fa-facebook"></i></span>
-                                        <span class="text-container">Log in with Facebook</span>
-                                    </a>
-
-                                    <a href='{{ url('/google-login') }}' class="btn-google">
-                                        <span class="icon-container g-icon"><img src="{{url('public/sites/images/google_icon.png')}}"></span>
-                                        <span class="text-container">Log in with Google</span>
-                                    </a>
-
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="col-sm-12">
-
-                                    <div class="signup-or-separator">
-                                        <span class="h6 signup-or-separator--text">or</span>
-                                        <hr>
-                                    </div>
-                                </div>-->
+                                <!--                                <div class="col-sm-12">
+                                                                    <a href='{{ url('/facebook-login') }}' class='btn-facebook'>
+                                                                        <span class="icon-container"><i class="fa fa-facebook"></i></span>
+                                                                        <span class="text-container">Log in with Facebook</span>
+                                                                    </a>
+                                
+                                                                    <a href='{{ url('/google-login') }}' class="btn-google">
+                                                                        <span class="icon-container g-icon"><img src="{{url('public/sites/images/google_icon.png')}}"></span>
+                                                                        <span class="text-container">Log in with Google</span>
+                                                                    </a>
+                                
+                                                                    <div class="clearfix"></div>
+                                                                </div>
+                                                                <div class="col-sm-12">
+                                
+                                                                    <div class="signup-or-separator">
+                                                                        <span class="h6 signup-or-separator--text">or</span>
+                                                                        <hr>
+                                                                    </div>
+                                                                </div>-->
 
                                 <form action="{{url('login')}}" class="login-form" id="login_form" method="post" accept-charset="utf-8" novalidate="novalidate">
                                     @csrf
@@ -383,6 +383,7 @@
                                         <li class="signup"><a class="btn" id="signUpModal">Sign Up</a></li>
                                         @endif
                                         @else
+                                        
                                         <li class="signup">
                                             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -391,6 +392,7 @@
                                                 </form>
                                             </div>
                                         </li>
+
                                         @endguest
 
                                     </ul>
@@ -401,7 +403,7 @@
                 </div>
             </div>
         </header>
-            @yield('content')
+        @yield('content')
         <div class="footer">
             <div class="container">
                 <div class="row">

@@ -30,7 +30,7 @@
                     @guest
                     <a href="#" id="loginModal" class="btn btn-primary btn-lg play-now-btn">Play Now</a> </div>
                     @else
-                    <a href="game/1" class="btn btn-primary btn-lg play-now-btn">Play Now</a> </div>
+                    <a href="bet/{{@$id}}" class="btn btn-primary btn-lg play-now-btn">Play Now</a> </div>
                     @endguest
         </div>
         <div class="col-xl-4 col-lg-4 col-md-4">
