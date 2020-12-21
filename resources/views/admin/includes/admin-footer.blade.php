@@ -28,6 +28,10 @@
 <script src="{{ asset('public/student/plugins/summernote/summernote-bs4.min.js') }}"></script>
 <!-- overlayScrollbars -->
 <script src="{{ asset('public/student/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+
+
+<script src="{{ asset('public/student/plugins/bootstrap-slider/bootstrap-slider.min.js') }}"></script>
+<script src="{{ asset('public/student/plugins/ion-rangeslider/js/ion.rangeSlider.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('public/student/dist/js/adminlte.js') }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
@@ -131,5 +135,7 @@ $(function () {
 
 })
 </script>
+
+
 </body>
 </html>

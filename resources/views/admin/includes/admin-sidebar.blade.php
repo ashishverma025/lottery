@@ -1,7 +1,8 @@
 <!-- Main Sidebar Container -->
 <?php
 $userDetails = getUserDetails();
-$imgFolder = ($userDetails->user_type == '4') ? 'student' : 'tutor';
+//prd($userDetails);
+$imgFolder = 'users';
 $segment2 = Request::segment(2);
 $segment3 = Request::segment(3);
 ?>
@@ -9,7 +10,7 @@ $segment3 = Request::segment(3);
 <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #001f3f;">
     <!-- Brand Logo -->
     <a href="{{url('/admin/dashboard')}}" class="brand-link">
-<!--        <img src="{{url('public/sites/users/images/small-logo.png')}}" alt="Tutify" class="brand-image img-circle elevation-3"
+<!--        <img src="{{url('sites/users/images/small-logo.png')}}" alt="Tutify" class="brand-image img-circle elevation-3"
    style="opacity: .8">-->
         <h4 class="admn-title">Lottery Admin</h4>
     </a>
@@ -19,13 +20,13 @@ $segment3 = Request::segment(3);
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
                 @if(!empty($userDetails->avatar))
-                <img src="{{ asset('public/sites/images/')}}/{{$imgFolder}}/{{@$userDetails->id . '/' . @$userDetails->avatar }}" class="img-circle elevation-2" alt="User Image">
+                <img src="{{ asset('sites/images/')}}/{{$imgFolder}}/{{@$userDetails['id'] . '/' . @$userDetails['avatar'] }}" class="img-circle elevation-2" alt="User Image">
                 @else
-                <img src="{{ asset('public/sites/users/images/default_profile_user_img.png')}}" class="img-circle elevation-2" alt="User Image">
+                <img src="{{ asset('sites/users/images/default_profile_user_img.png')}}" class="img-circle elevation-2" alt="User Image">
                 @endif
             </div>
             <div class="info">
-                <a href="{{asset('editprofile')}}/<?= @$userDetails->id; ?>" class="d-block"><?= @$userDetails->name; ?></a>
+                <a href="{{asset('editprofile')}}/<?= @$userDetails['id']; ?>" class="d-block"><?= @$userDetails['name']; ?></a>
             </div>
         </div>
         <!-- Sidebar Menu -->
@@ -63,7 +64,12 @@ $segment3 = Request::segment(3);
                                 <p>Add User</p>
                             </a>
                         </li>
-
+                        <li class="nav-item">
+                            <a href="{{url('admin/user/user-bet')}}" class="nav-link {{$segment3=='user-bet'?'active':""}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>User Bet</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item has-treeview {{$segment2=='betting'?'menu-open':""}} {{$segment2=='addBetting'?'menu-open':""}}">
@@ -87,15 +93,44 @@ $segment3 = Request::segment(3);
                                 <p>Add New Bet</p>
                             </a>
                         </li>
-                        <!--                         <li class="nav-item">
-                                                    <a href="{{url('admin/user_list/student')}}" class="nav-link {{$segment3=='student'?'active':""}}">
-                                                        <i class="far fa-circle nav-icon"></i>
-                                                        <p>Students</p>
-                                                    </a>
-                                                </li> -->
                     </ul>
                 </li>
+                <li class="nav-item has-treeview {{$segment2=='betting-result'?'menu-open':""}}">
+                    <a href="#" class="nav-link {{$segment2=='betting-result'?'active':""}}">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>
+                            Betting Result Mgmt.
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{url('admin/betting-result')}}" class="nav-link {{$segment2=='betting-result'?'active':""}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Bet Result List</p>
+                            </a>
+                        </li>
 
+                    </ul>
+                </li>
+                <li class="nav-item has-treeview {{$segment2=='quick-betting'?'menu-open':""}}">
+                    <a href="#" class="nav-link {{$segment2=='quick-betting'?'active':""}}">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>
+                            Users Quick Betting List
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{url('admin/quick-betting')}}" class="nav-link {{$segment2=='quick-betting'?'active':""}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Quick Bet List</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
                 <li class="nav-item">
                     <a href="{{url('logout')}}" class="nav-link">
                         <i class="nav-icon fas fa-sign-out-alt"></i>

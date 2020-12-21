@@ -19,7 +19,7 @@ input, select { vertical-align: middle; }
 .bannerslider { position: relative; }
 .bannerslider .image {opacity: 1; height: 100%; position: relative; }
 .bannerslider .image:after { content: " "; position: absolute; right: -5%; top: 9%; width: 3px; z-index: 999; background: linear-gradient(#fff, #fff);
- -webkit-box-shadow: 2px 0px 6px 0px 0px rgba(0,0,0,0.25); -moz-box-shadow: 2px 0px 6px 0px rgba(0,0,0,0.25); box-shadow: 2px 0px 6px 0px rgba(0,0,0,0.25); bottom: -2%; }
+                             -webkit-box-shadow: 2px 0px 6px 0px 0px rgba(0,0,0,0.25); -moz-box-shadow: 2px 0px 6px 0px rgba(0,0,0,0.25); box-shadow: 2px 0px 6px 0px rgba(0,0,0,0.25); bottom: -2%; }
 .bannerslider .image:before { content: " "; position: absolute; right: -5%; bottom: -2%; width: 100%; height: 3px; background: #fff; z-index: 999;  -webkit-box-shadow: 2px 0px 6px 0px 0px rgba(0,0,0,0.25); -moz-box-shadow: 2px 0px 6px 0px rgba(0,0,0,0.25); box-shadow: 0px 22px 13px 1px rgba(0,0,0,0.25);}
 .bannerslider .image img { border: 5px solid #fff; width: 100%; float: left; }
 .bannerslider .image img.banerimage:before { }
@@ -64,7 +64,7 @@ span.btn-slide { background: rgba(0,0,0,0.8); padding: 10px 12px; }
 .blog-section .articlesingle .text .info span.date { font-size: 14px; color: #9c9c9c; } 
 .blog-section .articlesingle .text p { font-size: 16px; margin-bottom: 15px; }
 .blog-section .articlesingle .text .read-more-btn {  user-select: none; border: 1px solid transparent;  text-align: center; white-space: nowrap;
-vertical-align: middle; display: inline-block; padding: .5rem 1rem; font-size: 1.25rem;  line-height: 1.5; border-radius: .3rem;   background-color: #efd048; text-transform: uppercase; border-color: #efd048; color: #333; font-weight: 600; }
+                                                     vertical-align: middle; display: inline-block; padding: .5rem 1rem; font-size: 1.25rem;  line-height: 1.5; border-radius: .3rem;   background-color: #efd048; text-transform: uppercase; border-color: #efd048; color: #333; font-weight: 600; }
 /* End  Artical Block Section */
 
 /* QUICK GAME SECTION HOME */
@@ -128,8 +128,8 @@ vertical-align: middle; display: inline-block; padding: .5rem 1rem; font-size: 1
 .login-model .btn-facebook { display: inline-block; transition-duration: 0.2s;  transition-timing-function: ease-out; position: relative; display: inline-block;text-align: center; width: 100%; font-size: 14px; line-height: 15px;letter-spacing: normal; padding-top: 10px; padding-bottom: 10px; color: rgb(255, 255, 255); text-decoration: none; border-radius: 4px; border-width: 2px; border-style: solid; background: rgb(69, 104, 178); border-color: transparent; }
 .login-model .btn-facebook:hover { color: #fff; text-decoration: none; }
 .login-model .btn-google { display: inline-block; cursor: pointer; transition-property: background, border-color, color; transition-duration: 0.2s; transition-timing-function: ease-out; position: relative; display: inline-block; text-align: center; width: 100%; font-size: 14px; line-height: 15px;
-letter-spacing: normal; padding-top: 10px;  padding-bottom: 10px; padding-left: 22px; padding-right: 22px; color: rgb(72, 72, 72);text-decoration: none;
-border-radius: 4px;  border-width: 2px; border-style: solid; background: rgb(255, 255, 255); border-color: rgb(118, 118, 118); margin-top: 10px; }
+                           letter-spacing: normal; padding-top: 10px;  padding-bottom: 10px; padding-left: 22px; padding-right: 22px; color: rgb(72, 72, 72);text-decoration: none;
+                           border-radius: 4px;  border-width: 2px; border-style: solid; background: rgb(255, 255, 255); border-color: rgb(118, 118, 118); margin-top: 10px; }
 .login-model .btn-google:hover { color: #000; text-decoration: none; }
 .login-model .btn-google  span.icon-container.g-icon img { width: 20px; }
 .login-model .signup-or-separator { background: none; position: relative; text-align: center; padding: 10px 0; }
@@ -157,8 +157,8 @@ border-radius: 4px;  border-width: 2px; border-style: solid; background: rgb(255
 .SignUpModal .btn-facebook { display: inline-block; transition-duration: 0.2s;  transition-timing-function: ease-out; position: relative; display: inline-block;text-align: center; width: 100%; font-size: 14px; line-height: 15px;letter-spacing: normal; padding-top: 10px; padding-bottom: 10px; color: rgb(255, 255, 255); text-decoration: none; border-radius: 4px; border-width: 2px; border-style: solid; background: rgb(69, 104, 178); border-color: transparent; }
 .SignUpModal .btn-facebook:hover { color: #fff; text-decoration: none; }
 .SignUpModal .btn-google { display: inline-block; cursor: pointer; transition-property: background, border-color, color; transition-duration: 0.2s; transition-timing-function: ease-out; position: relative; display: inline-block; text-align: center; width: 100%; font-size: 14px; line-height: 15px;
-letter-spacing: normal; padding-top: 10px;  padding-bottom: 10px; padding-left: 22px; padding-right: 22px; color: rgb(72, 72, 72);text-decoration: none;
-border-radius: 4px;  border-width: 2px; border-style: solid; background: rgb(255, 255, 255); border-color: rgb(118, 118, 118); margin-top: 10px; }
+                           letter-spacing: normal; padding-top: 10px;  padding-bottom: 10px; padding-left: 22px; padding-right: 22px; color: rgb(72, 72, 72);text-decoration: none;
+                           border-radius: 4px;  border-width: 2px; border-style: solid; background: rgb(255, 255, 255); border-color: rgb(118, 118, 118); margin-top: 10px; }
 .SignUpModal .btn-google:hover { color: #000; text-decoration: none; }
 .SignUpModal .btn-google  span.icon-container.g-icon img { width: 20px; }
 .SignUpModal .signup-or-separator { background: none; position: relative; text-align: center; padding: 10px 0; }
@@ -211,7 +211,7 @@ border-radius: 4px;  border-width: 2px; border-style: solid; background: rgb(255
 .gameplay .gameplayinner .gameplayinnerleft  p { font-size: 14px; font-weight: 600; }
 .gameplay .gameplayinner .gameplayinnerleft  .numberbox { background: #eae5e5; padding: 5px; border-radius: 10px; margin-top: 30px; }
 .gameplay .gameplayinner .gameplayinnerleft  .numberbox span { width: 30px; height: 30px; display: inline-block; text-align: center; margin: 6px;
-background: #9c820f; line-height: 30px; color: #fff; border-radius: 50%; font-size: 12px; }
+                                                               background: #9c820f; line-height: 30px; color: #fff; border-radius: 50%; font-size: 12px; }
 .gameplay .gameplayinner .gameplayinnerleft  .numberbox .seltd {background: gray}
 
 
@@ -239,7 +239,59 @@ background: #9c820f; line-height: 30px; color: #fff; border-radius: 50%; font-si
 .gameplay .gameplayinner .morelines { visibility: hidden; width: 200px; background: #9c820f; border-radius: 5px;  padding: 5px; text-align: center; color: #fff; margin: 20px 20px; }
 .gameplay .gameplayinner .morelines i { margin-right: 5px; }
 .gameplay .gameplayinner .buy { width: 300px; text-align: center; background: red;  margin: 0 auto; line-height: 20px; font-size: 24px; padding: 20px 0;
-border-radius: 7px; color: #fff; }
+                                border-radius: 7px; color: #fff; }
 .gameplay .gameplayinner .buy span { font-size: 14px; line-height: 12px; padding-top: 20px; }
 .gameplay .gameplayinner .maximum { text-align: center; font-size: 14px; }
 /*/ BETTING DETAIL PAGE CSS END /*/
+
+.gamelisting  { padding: 80px 0; }
+.gamelisting .gameitem  { padding: 17px; margin: 0 0 35px 0; border: 1px solid #ccc; border-radius: 7px; } 
+.gamelisting .gameitem  .image { padding: 0; }
+.gamelisting .gameitem  .image  .imageinner { }
+.gamelisting .gameitem  .image .imageinner img { width: 100%; height: auto;  max-height: 200px; object-fit: cover; border-radius: 10px; }
+.gamelisting .gameitem .text  { padding-right: 0px; }
+.gamelisting .gameitem .text .textinner { }
+.gamelisting .gameitem .text .textinner h2 { text-transform: uppercase; font-size: 22px; }
+.gamelisting .gameitem .text .textinner p { font-size: 16px; line-height: 26px; }
+.gamelisting .gameitem .text .textinner span { float: right; margin: 50px 0 0 0; }
+.gamelisting .gameitem .text .textinner span  a {  text-align: center; font-size: 17px;  background: red; padding: 10px; border-radius: 7px 7px 7px 0px; color: #fff; } 
+.firstpopup { top: 50%; left: 50%; transform: translate(-50%, -50%); bottom: auto; }
+.firstpopup .modal-dialog { width: 600px; }
+.firstpopup .modal-content { border-radius: 0; }
+.firstpopup .modal-header { border: 0px; padding: 0; }
+.firstpopup h2.popuptitle { font-size: 20px; display: block; text-align: center; padding: 10px 0; text-transform: uppercase; font-weight: 400;  }
+.firstpopup .modal-header .close { position: absolute; top: 8px; right: 25px; opacity: 1;  cursor: pointer; z-index: 999; width: 25px; height: 25px; }
+.firstpopup .modal-body { padding: 0 30px 0 30px; }
+.firstpopup .modal-body .image { width: 100%; margin-bottom: 15px; }
+.firstpopup .modal-body .image img { width: 100%; height: 160px; object-fit: cover;  }
+.firstpopup .modal-body .text { width: 100%; }
+.firstpopup .modal-body .text  h2 { font-size: 20px; }
+.firstpopup .modal-body .text p { font-size: 14px;  line-height: 20px; }
+
+.firstpopup .modal-footer { border: 0px; padding-bottom: 15px; }
+.firstpopup .proceed-btn { display: block; padding: 0px 20px; background-color: #191919; font-size: 16px; color: #fff; text-transform: uppercase; text-decoration: none; border: 1px solid transparent; border-radius: 0; line-height: 40px; max-width: 220px; margin: 0 auto; }
+.firstpopup .proceed-btn:hover { background-color: #666; color: #fff; border-color: #e5e5e5; }
+.firstpopup .selectpicks { }
+.firstpopup .selectpicks .fullbtn { width: 160px; background: #efd048; border: 2px solid #efd048; color: #000; margin: 15px 0; float: left; text-align: center; }
+.firstpopup .selectpicks ul { float: left; margin: 15px 0; padding: 0; }
+.firstpopup .selectpicks ul li { float: left; width: 40px;  height: 40px; border-radius: 5px;  background: #fff; list-style-type: none; margin-right: 15px; padding: 0; }
+.firstpopup .selectpicks ul li input { padding: 5px; text-align: center; height: 40px; }
+.successMsg{color:green;text-align:center;margin-left:250px;}
+
+
+/*/ MY ACCOUNT CSS START /*/
+.myaccountpage { padding: 80px 0; position: relative; }
+.accordion { display: block; width: 100%; }
+.accordion .card { margin-bottom: 15px; border-color: #efd048; }
+.accordion .card-header { padding: 0px; background: #efd048; border-color: #efd048; }
+.accordion .card-header a { padding: 10px; display: block; text-decoration: none; }
+.accordion .card-header h5 { font-size: 18px; color: #000; text-transform: uppercase; letter-spacing: 1.5px; }
+.accordion .card-header h5 i { float: right; }
+.accordion .card-body { padding: 15px 30px; }
+.accordion .card-body h2 { font-size: 18px; text-align: center; padding: 20px 0; text-transform: uppercase; }
+.accordion .card-body p { font-size: 14px; }
+.accordion .card-body select { max-width: 200px; margin: 20px auto; }
+.accordion .card-body form { max-width: 500px; margin: 20px auto; }
+.accordion .submitbtn { background-color: #efd048; border-color: #efd048; color: #000; }
+.accordion  img.profilepic { width: 100%; margin-bottom: 25px; border-radius: 50%; max-width: 200px;  height: 200px; border: 2px solid #efd048; padding: 5px; } 
+/*/ MY ACCOUNT CSS END /*/

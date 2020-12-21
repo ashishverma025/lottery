@@ -2,6 +2,15 @@
 <!-- /.navbar -->
 @include('admin/includes.admin-sidebar')
 <!-- Content Wrapper. Contains page content -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  });
+  </script>
 <div class="content-wrapper">
     @if(Session::has('message'))
     <p class="alert {{ Session::get('alert-class') }}">{{ Session::get('message') }}</p>
@@ -40,14 +49,24 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
+   <div class="form-group">
+                                    <label>Bet Date</label>
+                                <input type="text" id="datepicker" class="form-control" name="bet_date" autocomplete="off" value="<?= @$BettingDetails->bet_date; ?>" placeholder="Bet Date" required>
+                                </div>
+
+
+                              
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
 
                                 <div class="form-group">
-                                    <label>Bet Date</label>
-                                    <input type="date" id="bet_date" class="form-control" name="bet_date" autocomplete="off" value="<?= @$BettingDetails->bet_date; ?>" placeholder="Bet Date" required>
+                                    <label>Betting Description</label>
+                                    <textarea type="text" id="editor1" class="form-control" name="bet_description" autocomplete="off" placeholder="Bet Description">{{ @$BettingDetails->bet_description}}</textarea>
                                 </div>
                             </div>
                         </div>
-
 
                         <div class="row">
                             <div class="col-md-6">
@@ -72,26 +91,6 @@
                                     <input type="number" id="winning_amount" class="form-control" name="winning_amount" autocomplete="off" value="<?= @$BettingDetails->winning_amount; ?>" placeholder="Winning Amount" required>
                                 </div>
                             </div>
-
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Winning Number</label>
-                                    <input type="number" id="winning_number" class="form-control" name="winning_number" autocomplete="off" value="<?= @$BettingDetails->winning_number; ?>" placeholder="Winning Number" required>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label> Announce winning number</label>
-                                    <select class="form-control" name="announce_winning_number" id="gender">
-                                        <option <?= (@$BettingDetails->announce_winning_number == 'No') ? 'selected' : '' ?>>No</option>
-                                        <option <?= (@$BettingDetails->announce_winning_number == 'Yes') ? 'selected' : '' ?>>Yes</option>
-                                    </select> 
-                                </div>
-                            </div>
-
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Number Length</label>
@@ -105,13 +104,14 @@
                             </div>
                         </div>
 
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Status</label>
-                                    <select class="form-control" name="status" id="gender">
-                                        <option <?= (@$BettingDetails->status == 'active') ? 'selected' : '' ?>>Active</option>
-                                        <option <?= (@$BettingDetails->status == 'inactive') ? 'selected' : '' ?>>Inactive</option>
+                                    <select class="form-control" name="status" id="status">
+                                        <option <?= (@$BettingDetails->status == 'Active') ? 'selected' : '' ?>>Active</option>
+                                        <option <?= (@$BettingDetails->status == 'Inactive') ? 'selected' : '' ?>>Inactive</option>
                                     </select>  
                                 </div>
                             </div>
@@ -134,5 +134,15 @@
     </section>
     <!-- /.content -->
 </div>
+<script src="https://adminlte.io/themes/AdminLTE/bower_components/ckeditor/ckeditor.js"></script>
+<script>
+$(function () {
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    CKEDITOR.replace('editor1')
+    //bootstrap WYSIHTML5 - text editor
+    $('.textarea').wysihtml5()
+})
+</script>
 @include('admin/includes.admin-footer')
 

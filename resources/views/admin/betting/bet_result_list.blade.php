@@ -1,6 +1,4 @@
 @include('admin/includes.admin-head')
-
-<!-- /.navbar -->
 @include('admin/includes.admin-sidebar')
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -23,22 +21,12 @@
             <div class="card card-default">
                 <!-- /.card-header -->
                 <div class="card-header " style="background-color: #337ab7; color: white">
-                    Betting Listing
+                    Betting Result Listing
                 </div>
                 <div class="card-body">
                     <!--EXIST STUDENTS LIST-->
                     <span id="csv_err" class="errMsg"></span>
                     <div class="alert alert-danger" id="res_err" style="display: none"> <strong>Warning!</strong></div>
-
-                    <div class="table-toolbar">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <div class="btn-group">
-                                    <a href="{{url('admin/addBetting')}}" id="update_attendance_table" class=" btn btn-primary"> Add New</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     <input type="hidden" id="user_type" value="{{@$type}}" />
                     <div>
@@ -52,8 +40,9 @@
                                         <th class="sorting wid-25" tabindex="0" rowspan="1" colspan="1">Start Number</th>
                                         <th class="sorting wid-25" tabindex="0" rowspan="1" colspan="1">End Number</th>
                                         <th class="sorting wid-25" tabindex="0" rowspan="1" colspan="1">Winning Amount</th>
+                                        <th class="sorting wid-25" tabindex="0" rowspan="1" colspan="1">Winning Number</th>
+                                        <th class="sorting wid-25" tabindex="0" rowspan="1" colspan="1">Announce Winning Number</th>
                                         <th class="sorting wid-10" tabindex="0" rowspan="1" colspan="1">Status</th>
-                                        <th class="sorting wid-10" tabindex="0" rowspan="1" colspan="1">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody></tbody>
@@ -84,10 +73,11 @@ $(document).on('click', '#update_attendance_table', function () {
 });
 
 
+
 $(document).ready(function () {
     var base_url = "{{asset('/admin')}}";
     var user_type = $('#user_type').val();
-    var url = base_url + '/fetchBetting'
+    var url = base_url + '/fetchBettingResult'
 
     console.log(url);
 //alert(base_url + '/admin/fetchUsers');
@@ -115,7 +105,7 @@ $(document).ready(function () {
             {'bSortable': true},
             {'bSortable': true},
             {'bSortable': true},
-            //{'bSortable': false, "width": "10%"}
+            {'bSortable': false, "width": "10%"}
         ]
     });
     var tableWrapper = $("#editable_table_wrapper");

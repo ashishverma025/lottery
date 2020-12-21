@@ -371,11 +371,10 @@
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span> </button>
                                 <div class="collapse navbar-collapse" id="navbarResponsive">
                                     <ul class="navbar-nav ml-auto">
-                                        <li class="active"><a class="nav-link" href="#">Vegas</a></li>
-                                        <li><a class="nav-link" href="#">Results</a></li>
-                                        <li><a class="nav-link" href="#">Promotions</a></li>
+                                        <!--                                        <li class="active"><a class="nav-link" href="#">Vegas</a></li>-->
+                                        <!--<li><a class="nav-link" href="#">Results</a></li>-->
+                                        <!--<li><a class="nav-link" href="#">Promotions</a></li>-->
                                         <li><a class="nav-link" href="#">Help </a></li>
-                                        <li><a class="nav-link" href="#">Company</a></li>
 
                                         @guest
                                         <li class="signup"><a class="btn" id="loginModal"> Log In</a></li>
@@ -383,7 +382,14 @@
                                         <li class="signup"><a class="btn" id="signUpModal">Sign Up</a></li>
                                         @endif
                                         @else
-                                        
+                                        @php
+                                        $userDetails = getUserDetails();
+                                        $name = explode(' ',$userDetails['name']);
+                                        @endphp
+                                        <li><a class="nav-link" href="my-account">My Account</a></li>
+
+                                        <li ><a class="nav-link" href="#">Hello, {{$name[0]}}</a></li>
+
                                         <li class="signup">
                                             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -392,7 +398,6 @@
                                                 </form>
                                             </div>
                                         </li>
-
                                         @endguest
 
                                     </ul>
@@ -462,6 +467,7 @@
                 </div>
             </div>
         </div>
+
         <script src='{{ url('public/sites/js/jquery.min.js') }}'></script> 
         <script src='{{ url('public/sites/js/owl.carousel.min.js') }}'></script> 
         <!--<script  src="{{ url('public/sites/js/script.js') }}"></script>--> 

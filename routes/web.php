@@ -26,8 +26,13 @@ Route::post('/sign-in', 'Auth\RegisterController@signIn');
 Route::get('/facebook-login', 'SocialAuthFacebookController@redirect');
 Route::get('/facebook-callback', 'SocialAuthFacebookController@callback');
 Route::get('/', 'WelcomeController@landing_index');
+
 Route::get('/bet/{id?}', 'WelcomeController@bet');
 Route::get('/bet_list/{id?}', 'WelcomeController@betList');
+Route::post('/adduserBet', 'AjaxController@addUserBet');
+Route::post('/getBetDetails', 'AjaxController@getBetDetails');
+Route::get('/my-account', 'WelcomeController@myAccount');
+Route::get('/bet-record', 'WelcomeController@betRecord');
 
 Auth::routes(['verify' => true]);
 
@@ -79,16 +84,25 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function() {
     Route::get('/user/edit/{id?}', 'UserController@edit');
     Route::get('/user/destroy/{id}', 'UserController@destroy');
     Route::get('/fetchUsers', 'UserController@fetchUsers');
+    Route::get('/fetchUserbet', 'UserController@fetchUserbet');
 
-    
+
     /* Betting Route */
     Route::get('/betting', 'BettingController@index');
     Route::get('/fetchBetting', 'BettingController@fetchBetting');
     Route::any('/addBetting/{id?}', 'BettingController@saveBetting');
     Route::any('/deleteBetting/{id?}', 'BettingController@deleteBetting');
     Route::any('/announceWinningNumber/{id?}', 'BettingController@announceWinningNumber');
+
+    /* Betting Result Management Route */
+    Route::get('/betting-result', 'BettingResultController@index');
+    Route::get('/fetchBettingResult', 'BettingResultController@fetchBetting');
+    Route::any('/announceWinningNumber/{id?}', 'BettingResultController@announceWinningNumber');
+    Route::any('/addWinningNumber/{id?}', 'BettingResultController@addWinningNumber');
     
-   
+    Route::get('/quick-betting', 'QuickBettingController@index');
+    Route::get('/fetchQuickBetting', 'QuickBettingController@fetchQuickBetting');
+
     Route::get('/edit/{id?}', 'UserController@edit');
     Route::post('/uploadstudents', 'UserController@uploadStudentByCsv');
     Route::get('/dashboard', 'HomeController@index')->name('home')->middleware('guard.verified:admin,admin.verification.notice');
@@ -125,9 +139,9 @@ Route::post('/onlinePractice', 'StudentsController@onlinePractice');
 
 /* ----------------------- Online Exam -------------------------------- */
 
-Route::get('/onlineExam/step-1','OnlineExamController@Step1');
-Route::post('/onlineExam/start','OnlineExamController@index');
-Route::get('/onlineExam/start','OnlineExamController@index');
+Route::get('/onlineExam/step-1', 'OnlineExamController@Step1');
+Route::post('/onlineExam/start', 'OnlineExamController@index');
+Route::get('/onlineExam/start', 'OnlineExamController@index');
 //Route::get('/onlineExam/{id}','OnlineExamController@index');
 //Route::post('/onlineExam','OnlineExamController@index');
 
@@ -139,6 +153,8 @@ Route::post('/saveAnswered', 'AjaxController@saveAnswered');
 Route::post('/questionAttempt', 'AjaxController@questionAttempt');
 Route::post('/progressStatus', 'AjaxController@progressStatus');
 Route::post('/removeProgress', 'AjaxController@removeProgress');
+Route::get('/payment/{id}', 'PaymentController@Payment');
+Route::get('/subscribePlan/{id}', 'SubscribeController@subscribePlan');
 Route::post('/saveTransaction', 'AjaxController@saveTransaction');
 
 

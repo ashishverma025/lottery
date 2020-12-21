@@ -19,6 +19,8 @@
         <link rel="stylesheet" href="{{ asset('public/student/plugins/select2/css/select2.min.css')}}">
         <link rel="stylesheet" href="{{ asset('public/student/dist/css/adminlte.min.css')}}">
         <link rel="stylesheet" href="{{ asset('public/student/dist/css/custom.css')}}">
+        <link rel="stylesheet" href="{{ asset('public/student/plugins/ion-rangeslider/css/ion.rangeSlider.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('public/student/plugins/bootstrap-slider/css/bootstrap-slider.min.css')}}">
         <!--Duallistbox-->
         <link rel="stylesheet" href="{{ asset('public/student/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css')}}">
         <link rel="stylesheet" href="{{ asset('public/student/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css')}}">
@@ -110,8 +112,6 @@
                             <a class="dropdown-item" href="{{url('admin/change_password')}}"><i class="fa fa-lock" style="color:graytext"></i>
                                 Change Password</a>
 
-                            {{-- <a class="dropdown-item" href="login2.html"><i class="fa fa-sign-out"></i>
-                                Log Out</a                                    > --}}
 
                                     @if(Auth::guard('admin')->check())
                                     <a class="dropdown-item" href="#" onclick="event.preventDefault();document.querySelector('#admin-logout-form').submit();"> <i class="fa fa-sign-out"></i>

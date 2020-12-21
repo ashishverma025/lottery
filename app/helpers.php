@@ -309,9 +309,8 @@ if (!function_exists('getUser_Detail_ByParam')) {
 if (!function_exists('getUserDetails')) {
 
     function getUserDetails() {
-        $userId = getUser_Detail_ByParam('id');
-        $user = Auth::user();
-//        prd($User);
+        $user = Auth::user()->toArray();
+//        prd($user);
         return $user;
     }
 
