@@ -331,7 +331,7 @@ if (!function_exists('getRoleNameById')) {
 }
 
 
-if (!function_exists('getUserDetails')) {
+/*if (!function_exists('getUserDetails')) {
 
     function getUserDetails() {
         $userId = getUser_Detail_ByParam('id');
@@ -340,7 +340,7 @@ if (!function_exists('getUserDetails')) {
         return isset($UserDetails[0]) ? $UserDetails[0] : "";
     }
 
-}
+}*/
 
 
 

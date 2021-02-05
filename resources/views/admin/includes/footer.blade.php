@@ -15,50 +15,50 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="{{ asset('public/admin/plugins/jquery/jquery.min.js') }}"></script>
+<script src="{{ asset('admin/plugins/jquery/jquery.min.js') }}"></script>
 <!-- jQuery UI 1.11.4 -->
-<script src="{{ asset('public/admin/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+<script src="{{ asset('admin/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
 $.widget.bridge('uibutton', $.ui.button)
 </script>
 <!-- Bootstrap 4 -->
-<script src="{{ asset('public/admin/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('admin/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- ChartJS -->
-<script src="{{ asset('public/admin/plugins/chart.js/Chart.min.js') }}"></script>
+<script src="{{ asset('admin/plugins/chart.js/Chart.min.js') }}"></script>
 <!-- Sparkline -->
-<script src="{{ asset('public/admin/plugins/sparklines/sparkline.js') }}"></script>
+<script src="{{ asset('admin/plugins/sparklines/sparkline.js') }}"></script>
 <!-- JQVMap -->
-<script src="{{ asset('public/admin/plugins/jqvmap/jquery.vmap.min.js') }}"></script>
-<script src="{{ asset('public/admin/plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script>
+<script src="{{ asset('admin/plugins/jqvmap/jquery.vmap.min.js') }}"></script>
+<script src="{{ asset('admin/plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script>
 <!-- jQuery Knob Chart -->
-<script src="{{ asset('public/admin/plugins/jquery-knob/jquery.knob.min.js') }}"></script>
+<script src="{{ asset('admin/plugins/jquery-knob/jquery.knob.min.js') }}"></script>
 <!-- daterangepicker -->
-<script src="{{ asset('public/admin/plugins/moment/moment.min.js') }}"></script>
-<script src="{{ asset('public/admin/plugins/daterangepicker/daterangepicker.js') }}"></script>
+<script src="{{ asset('admin/plugins/moment/moment.min.js') }}"></script>
+<script src="{{ asset('admin/plugins/daterangepicker/daterangepicker.js') }}"></script>
 <!-- Tempusdominus Bootstrap 4 -->
-<script src="{{ asset('public/admin/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+<script src="{{ asset('admin/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}"></script>
 <!-- Summernote -->
-<script src="{{ asset('public/admin/plugins/summernote/summernote-bs4.min.js') }}"></script>
+<script src="{{ asset('admin/plugins/summernote/summernote-bs4.min.js') }}"></script>
 <!-- overlayScrollbars -->
-<script src="{{ asset('public/admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+<script src="{{ asset('admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
 <!-- AdminLTE App -->
-<script src="{{ asset('public/admin/dist/js/adminlte.js') }}"></script>
+<script src="{{ asset('admin/dist/js/adminlte.js') }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="{{ asset('public/admin/dist/js/pages/dashboard.js') }}"></script>
+<script src="{{ asset('admin/dist/js/pages/dashboard.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="{{ asset('public/admin/dist/js/demo.js') }}"></script>
+<script src="{{ asset('admin/dist/js/demo.js') }}"></script>
 <script src="http://localhost:8089/js/bootstrap.min.js"></script>
 <!-- jQuery -->
 <!-- Bootstrap 4 -->
 <!-- DataTables -->
-<!--<script src="{{ asset('public/admin/plugins/datatables/jquery.dataTables.js') }}"></script>-->
-<!--<script src="{{ asset('public/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.js') }}"></script>-->
+<!--<script src="{{ asset('admin/plugins/datatables/jquery.dataTables.js') }}"></script>-->
+<!--<script src="{{ asset('admin/plugins/datatables-bs4/js/dataTables.bootstrap4.js') }}"></script>-->
 <!-- AdminLTE App -->
-<script src="{{ asset('public/admin/dist/js/adminlte.min.js') }}"></script>
-<script src="{{ asset('public/admin/js/jquery.dataTables.js') }}"></script>
-<script src="{{ asset('public/admin/js/jquery.validate.min.js') }}"></script>
-<script src="{{ asset('public/admin/customJs/common.js') }}"></script>
+<script src="{{ asset('admin/dist/js/adminlte.min.js') }}"></script>
+<script src="{{ asset('admin/js/jquery.dataTables.js') }}"></script>
+<script src="{{ asset('admin/js/jquery.validate.min.js') }}"></script>
+<script src="{{ asset('admin/customJs/common.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
 <!-- page script -->
 <script>
@@ -111,7 +111,7 @@ $(function () {
                                 <label for="text">Profile Image:</label>
                             </div>
                             <div class="col-md-6">
-                                <img src="{{ url('public/admin/images/profile/') }}/{{$user->profile_image  ?? 'avatar.png' }}" id="profileImg" height="75" width="80" src="#" alt="your image"/>
+                                <img src="{{ url('admin/images/profile/') }}/{{$user->profile_image  ?? 'avatar.png' }}" id="profileImg" height="75" width="80" src="#" alt="your image"/>
                             </div>
                         </div>
                         <div class="row">

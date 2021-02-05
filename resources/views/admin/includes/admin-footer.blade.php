@@ -16,49 +16,49 @@
 <!-- jQuery -->
 
 <!-- ChartJS -->
-<script src="{{ asset('public/student/plugins/chart.js/Chart.min.js') }}"></script>
+<script src="{{ asset('student/plugins/chart.js/Chart.min.js') }}"></script>
 <!-- Sparkline -->
-<script src="{{ asset('public/student/plugins/sparklines/sparkline.js') }}"></script>
+<script src="{{ asset('student/plugins/sparklines/sparkline.js') }}"></script>
 <!-- JQVMap -->
-<script src="{{ asset('public/student/plugins/jqvmap/jquery.vmap.min.js') }}"></script>
-<script src="{{ asset('public/student/plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script>
+<script src="{{ asset('student/plugins/jqvmap/jquery.vmap.min.js') }}"></script>
+<script src="{{ asset('student/plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script>
 <!-- jQuery Knob Chart -->
-<script src="{{ asset('public/student/plugins/jquery-knob/jquery.knob.min.js') }}"></script>
+<script src="{{ asset('student/plugins/jquery-knob/jquery.knob.min.js') }}"></script>
 <!-- Summernote -->
-<script src="{{ asset('public/student/plugins/summernote/summernote-bs4.min.js') }}"></script>
+<script src="{{ asset('student/plugins/summernote/summernote-bs4.min.js') }}"></script>
 <!-- overlayScrollbars -->
-<script src="{{ asset('public/student/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+<script src="{{ asset('student/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
 
 
-<script src="{{ asset('public/student/plugins/bootstrap-slider/bootstrap-slider.min.js') }}"></script>
-<script src="{{ asset('public/student/plugins/ion-rangeslider/js/ion.rangeSlider.min.js') }}"></script>
+<script src="{{ asset('student/plugins/bootstrap-slider/bootstrap-slider.min.js') }}"></script>
+<script src="{{ asset('student/plugins/ion-rangeslider/js/ion.rangeSlider.min.js') }}"></script>
 <!-- AdminLTE App -->
-<script src="{{ asset('public/student/dist/js/adminlte.js') }}"></script>
+<script src="{{ asset('student/dist/js/adminlte.js') }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 
 
-<script src="{{ asset('public/student/dist/js/pages/dashboard.js') }}"></script>
-<script src="{{ asset('public/student/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-<script src="{{ asset('public/student/plugins/select2/js/select2.full.min.js')}}"></script>
-<script src="{{ asset('public/student/plugins/moment/moment.min.js')}}"></script>
-<script src="{{ asset('public/student/plugins/inputmask/min/jquery.inputmask.bundle.min.js')}}"></script>
-<script src="{{ asset('public/student/plugins/daterangepicker/daterangepicker.js')}}"></script>
-<script src="{{ asset('public/student/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js')}}"></script>
-<script src="{{ asset('public/student/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
-<script src="{{ asset('public/student/plugins/bootstrap-switch/js/bootstrap-switch.min.js')}}"></script>
-<script src="{{ asset('public/student/dist/js/adminlte.min.js')}}"></script>
-<script src="{{ asset('public/student/dist/js/demo.js')}}"></script>
-<script src="{{ asset('public/student/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js')}}"></script>
-<script src="{{ asset('public/student/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css')}}"></script>
+<script src="{{ asset('student/dist/js/pages/dashboard.js') }}"></script>
+<script src="{{ asset('student/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{ asset('student/plugins/select2/js/select2.full.min.js')}}"></script>
+<script src="{{ asset('student/plugins/moment/moment.min.js')}}"></script>
+<script src="{{ asset('student/plugins/inputmask/min/jquery.inputmask.bundle.min.js')}}"></script>
+<script src="{{ asset('student/plugins/daterangepicker/daterangepicker.js')}}"></script>
+<script src="{{ asset('student/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js')}}"></script>
+<script src="{{ asset('student/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
+<script src="{{ asset('student/plugins/bootstrap-switch/js/bootstrap-switch.min.js')}}"></script>
+<script src="{{ asset('student/dist/js/adminlte.min.js')}}"></script>
+<script src="{{ asset('student/dist/js/demo.js')}}"></script>
+<script src="{{ asset('student/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js')}}"></script>
+<script src="{{ asset('student/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css')}}"></script>
 
-<script src="{{URL::asset('public/admn/js/pluginjs/jquery.dataTables.min.js')}}"></script>
-<script src="{{URL::asset('public/admn/js/pluginjs/dataTables.bootstrap.min.js')}}"></script>
-<script src="{{URL::asset('public/admn/js/pluginjs/dataTables.responsive.min.js')}}"></script>
-<script src="{{URL::asset('public/admn/js/pluginjs/dataTables.buttons.min.js')}}"></script>
-<script src="{{URL::asset('public/admn/js/pluginjs/buttons.colVis.min.js')}}"></script>
-<script src="{{URL::asset('public/admn/js/pluginjs/buttons.html5.min.js')}}"></script>
-<script src="{{URL::asset('public/admn/js/pluginjs/buttons.bootstrap.min.js')}}"></script>
-<script src="{{URL::asset('public/admn/js/pluginjs/buttons.print.min.js')}}"></script>
+<script src="{{URL::asset('admn/js/pluginjs/jquery.dataTables.min.js')}}"></script>
+<script src="{{URL::asset('admn/js/pluginjs/dataTables.bootstrap.min.js')}}"></script>
+<script src="{{URL::asset('admn/js/pluginjs/dataTables.responsive.min.js')}}"></script>
+<script src="{{URL::asset('admn/js/pluginjs/dataTables.buttons.min.js')}}"></script>
+<script src="{{URL::asset('admn/js/pluginjs/buttons.colVis.min.js')}}"></script>
+<script src="{{URL::asset('admn/js/pluginjs/buttons.html5.min.js')}}"></script>
+<script src="{{URL::asset('admn/js/pluginjs/buttons.bootstrap.min.js')}}"></script>
+<script src="{{URL::asset('admn/js/pluginjs/buttons.print.min.js')}}"></script>
 
 
 

@@ -8,7 +8,7 @@
 <div class="modal-body">
     <h2 class="popuptitle">Bet Details</h2>
     <div class="image">
-        <img src="{{url('public/sites/images/gallery-img1.jpg')}}"/>
+        <img src="{{url('sites/images/gallery-img1.jpg')}}"/>
     </div>
     <div class="text">
         <h2>{{$Betting['bet_name']}}</h2>

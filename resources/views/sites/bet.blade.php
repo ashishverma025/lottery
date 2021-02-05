@@ -1,5 +1,6 @@
 @extends('sites.layout.Sites')
 @section('content')
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <!--- INNER PAGE BANNER START --->
 <div class="innerbanner" style="background: url({{url('sites/images/innerbanner.jpg')}})">
@@ -10,7 +11,7 @@
 <!--- GAME PLAY START --->
 <div class="gameplay">
     <div class="container gameplayinner">
-        <form method="post">
+        <form>
             @csrf
             <div class="row">
                 <div class="col-md-5 gameplayinnerleft">
@@ -110,28 +111,29 @@
                 <div class="col-md-4"></div>
                 <div class="col-md-4">
                     <p class="morelines"><i class="fa fa-plus" aria-hidden="true"></i> Add More Lines</p>
-                    <button type="button" id="buyTicket" class="buy">Buy Ticket</button>
-                    <!--<a href="{{url('/payment')}}/{{$bettingDetails->id}}" id="buyTicket" class="buy">Buy Ticket</a>-->
+                    <button type="button" id="buyTicket" onclick="buyticket()" class="buy">Buy Ticket</button>
                 </div>
             </div>
         </form>
+        <input type="hidden" id="num5" class="fifthcircle">
     </div>
 </div>
 <!--- GAME PLAY END --->
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
-$("#buyTicket").click(function () {
+    function buyticket() {
     var num1 = $("input[name=num1]").val()
-    var num2 = $("input[name=num2]").val()
-    var num3 = $("input[name=num3]").val()
-    var num4 = $("input[name=num4]").val()
-    var num5 = $("input[name=num5]").val()
-    var amount = $("input[name=amount]").val()
-    var bet_id = {{$bettingDetails->id}}
-console.log(bet_id);
-    if (num1 != '' && num2 != '' && num3 != '' && num4 != '' && num5 != '' && amount != '' && bet_id !='') {
+            var num2 = $("input[name=num2]").val()
+            var num3 = $("input[name=num3]").val()
+            var num4 = $("input[name=num4]").val()
+            var num5 = $("input[name=num5]").val()
+            var amount = $("input[name=amount]").val()
+            var bet_id = '{{$bettingDetails->id}}';
 
+    console.log(bet_id);
+    if (num1 != '' && num2 != '' && num3 != '' && num4 != '' && num5 != '' && amount != '' && bet_id != '') {
+    $(".buy").text('Processing..');
+    $(".buy").prop('disabled', true);
         $.ajax({
             url: "{{url('adduserBet')}}",
             type: 'post',
@@ -151,89 +153,87 @@ console.log(bet_id);
             }
         });
     } else {
-        alert('Please fill all fields.')
+    alert('Please select 5 numbers.')
     }
-});
-
-</script>
+    };</script>
 <script>
 
     $(".frstrow").click(function () {
-        $('.frstrow').removeClass('seltd');
-        $(this).addClass('seltd');
-        var curval = $(this).text();
-        $(".firstcircle").val(curval);
+    $('.frstrow').removeClass('seltd');
+    $(this).addClass('seltd');
+    var curval = $(this).text();
+    $(".firstcircle").val(curval);
     })
 
-    $(".scndrow").click(function () {
-        $('.scndrow').removeClass('seltd');
-        $(this).addClass('seltd');
-        var curval = $(this).text();
-        $(".secondcircle").val(curval);
+            $(".scndrow").click(function () {
+    $('.scndrow').removeClass('seltd');
+    $(this).addClass('seltd');
+    var curval = $(this).text();
+    $(".secondcircle").val(curval);
     })
 
-    $(".thrdrow").click(function () {
-        $('.thrdrow').removeClass('seltd');
-        $(this).addClass('seltd');
-        var curval = $(this).text();
-        $(".thirdcircle").val(curval);
+            $(".thrdrow").click(function () {
+    $('.thrdrow').removeClass('seltd');
+    $(this).addClass('seltd');
+    var curval = $(this).text();
+    $(".thirdcircle").val(curval);
     })
-    $(".frthrow").click(function () {
-        $('.frthrow').removeClass('seltd');
-        $(this).addClass('seltd');
-        var curval = $(this).text();
-        $(".fourthcircle").val(curval);
+            $(".frthrow").click(function () {
+    $('.frthrow').removeClass('seltd');
+    $(this).addClass('seltd');
+    var curval = $(this).text();
+    $(".fourthcircle").val(curval);
     })
-    $(".fiftrow").click(function () {
-        $('.fiftrow').removeClass('seltd');
-        $(this).addClass('seltd');
-        var curval = $(this).text();
-        $(".fifthcircle").val(curval);
-    })
-
-
-    $(".increase").click(function () {
-        var curval = $(".incdecval").val();
-        $(".incdecval").val(parseInt(curval) + parseInt(1));
-    })
-    $(".decrease").click(function () {
-        var curval = $(".incdecval").val();
-        $(".incdecval").val(parseInt(curval) - parseInt(1));
+            $(".fiftrow").click(function () {
+    $('.fiftrow').removeClass('seltd');
+    $(this).addClass('seltd');
+    var curval = $(this).text();
+    $(".fifthcircle").val(curval);
     })
 
-    $(".randomNumber").click(function () {
-        var fval = Math.floor(Math.random() * 99);
-        $(".firstcircle").val(fval)
-        selectCircle('frstrow', fval)
+
+            $(".increase").click(function () {
+    var curval = $(".incdecval").val();
+    $(".incdecval").val(parseInt(curval) + parseInt(1));
+    })
+            $(".decrease").click(function () {
+    var curval = $(".incdecval").val();
+    $(".incdecval").val(parseInt(curval) - parseInt(1));
+    })
+
+            $(".randomNumber").click(function () {
+    var fval = Math.floor(Math.random() * 99);
+    $(".firstcircle").val(fval)
+            selectCircle('frstrow', fval)
 
 
-        var sval = Math.floor(Math.random() * 99);
-        $(".secondcircle").val(sval)
-        selectCircle('scndrow', sval)
+            var sval = Math.floor(Math.random() * 99);
+    $(".secondcircle").val(sval)
+            selectCircle('scndrow', sval)
 
-        var tval = Math.floor(Math.random() * 99);
-        $(".thirdcircle").val(tval)
-        selectCircle('thrdrow', tval)
+            var tval = Math.floor(Math.random() * 99);
+    $(".thirdcircle").val(tval)
+            selectCircle('thrdrow', tval)
 
-        var frthval = Math.floor(Math.random() * 99);
-        $(".fourthcircle").val(frthval)
-        selectCircle('frthrow', frthval)
+            var frthval = Math.floor(Math.random() * 99);
+    $(".fourthcircle").val(frthval)
+            selectCircle('frthrow', frthval)
 
-        var fvval = Math.floor(Math.random() * 99);
-        $(".fifthcircle").val(fvval)
-        selectCircle('fiftrow', fvval)
+            var fvval = Math.floor(Math.random() * 99);
+    $(".fifthcircle").val(fvval)
+            selectCircle('fiftrow', fvval)
 
     })
 
-    function selectCircle(cls, num) {
-        $("." + cls).each(function () {
+            function selectCircle(cls, num) {
+            $("." + cls).each(function () {
             var circleNum = $(this).text();
             if (circleNum == num) {
-                $('.' + cls).removeClass('seltd')
-                $(this).addClass('seltd')
+            $('.' + cls).removeClass('seltd')
+                    $(this).addClass('seltd')
             }
-        });
-    }
+            });
+            }
 </script>
 
 @endsection

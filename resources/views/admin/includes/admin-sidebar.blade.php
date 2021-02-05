@@ -64,12 +64,7 @@ $segment3 = Request::segment(3);
                                 <p>Add User</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="{{url('admin/user/user-bet')}}" class="nav-link {{$segment3=='user-bet'?'active':""}}">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>User Bet</p>
-                            </a>
-                        </li>
+
                     </ul>
                 </li>
                 <li class="nav-item has-treeview {{$segment2=='betting'?'menu-open':""}} {{$segment2=='addBetting'?'menu-open':""}}">
@@ -129,6 +124,32 @@ $segment3 = Request::segment(3);
                             </a>
                         </li>
 
+                    </ul>
+                </li>
+                
+                <li class="nav-item has-treeview {{$segment2=='addMenu'?'menu-open':""}}">
+                    <a href="#" class="nav-link {{$segment2=='addMenu'?'active':""}}">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>
+                            Users Menu Bar
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+
+                    <ul class="nav nav-treeview">
+
+                        <li class="nav-item">
+                            <a href="{{url('admin/addMenu')}}" class="nav-link {{$segment2=='addMenu'?'active':""}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add New Menu</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{url('admin/menulist')}}" class="nav-link {{$segment2=='menulist'?'active':""}}">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Menu List</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Betting;
+use App\Menu;
 use App\Quickbet;
 use Auth,
     DB;
@@ -21,9 +22,10 @@ class WelcomeController extends Controller {
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function landing_index() {
+        $menuDetails = Menu::get()->toArray();
         $betListDetail = Betting::where(['status' => 'Active'])->limit(3)->orderBy('id', 'DESC')->get()->toArray();
-
-        return view('sites.site-index', ['betListDetail' => $betListDetail]);
+//        return view('error404');
+        return view('sites.site-index', ['betListDetail' => $betListDetail,'menuDetails' => $menuDetails]);
     }
 
     public function myAccount() {
@@ -118,7 +120,7 @@ class WelcomeController extends Controller {
         $LcDetails = [];
         if (Auth::check()) {
             $userId = getUser_Detail_ByParam('id');
-            $LcDetails = LearningcenterDetails::where(['user_id' => $userId])->first();
+            //;$LcDetails = LearningcenterDetails::where(['user_id' => $userId])->first();
         }
         return view('sites.privacyPolicy', ['LcDetails' => $LcDetails]);
     }

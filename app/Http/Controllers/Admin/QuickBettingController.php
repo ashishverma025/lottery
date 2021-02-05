@@ -65,7 +65,7 @@ class QuickBettingController extends Controller {
             foreach ($QuickbetDetails as $inst) {
                 $status = $inst->status == "Active" ? "<span class='text-success'>Active</span>" : "<span class='text-danger'>Inactive</span>";
                 
-                $response['aaData'][$k] = [$k + 1, $inst->name, $inst->bet_name, $inst->num1, $inst->num2, $inst->num3, $inst->num4,$inst->num5,$inst->amount,$inst->created_at, $status];
+                $response['aaData'][$k] = [$k + 1, $inst->name, $inst->bet_name, $inst->num1, $inst->num2, $inst->num3, $inst->num4,$inst->num5,$inst->amount, $status];
                 $k++;
             }
         }

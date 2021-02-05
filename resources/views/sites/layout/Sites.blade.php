@@ -12,11 +12,18 @@
         <!--<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">-->
         <!--<link rel="preconnect" href="https://fonts.gstatic.com">-->
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{{ url('public/sites/css/all.css') }}">
-        <link rel="stylesheet" href="{{ url('public/sites/css/bootstrap.min.css') }}">
-        <link rel='stylesheet' href='{{ url('public/sites/css/owl.carousel.min.css') }}'>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" ><link href="{{ url('public/sites/css/style.css') }}" rel="stylesheet">
-
+        <link rel="stylesheet" href="{{ url('sites/css/all.css') }}">
+        <link rel="stylesheet" href="{{ url('sites/css/bootstrap.min.css') }}">
+        <link rel='stylesheet' href='{{ url('sites/css/owl.carousel.min.css') }}'>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" ><link href="{{ url('sites/css/style.css') }}" rel="stylesheet">
+        <style>
+            .button {
+                width: 100px;
+                background: #efd048;
+                border: 2px solid #efd048;
+                border-radius: 25px;
+            }
+        </style>
     </head>
     <body>
         <?php
@@ -43,7 +50,7 @@
                                                                 </div>
                                                                 <div class="col-sm-12">
                                                                     <a href="https://tutify.com.sg/home/g_sign_in" class="btn-google">
-                                                                        <span class="icon-container g-icon"><img src="{{url('public/sites/images/google_icon.png')}}"></span>
+                                                                        <span class="icon-container g-icon"><img src="{{url('sites/images/google_icon.png')}}"></span>
                                                                         <span class="text-container continueee">Continue with Google</span>
                                                                     </a>
                                                                 </div>
@@ -56,7 +63,7 @@
                                 <div class="col-sm-12">
                                     <a href="#" class="btn-google signup_with_email" id="signupForm">
                                         <span id="signup_with_email" class="icon-container g-icon">
-                                            <img src="{{url('public/sites/images/email-icon-white.png')}}">Sign up with Email</span>
+                                            <img src="{{url('sites/images/email-icon-white.png')}}">Sign up with Email</span>
                                     </a>
                                 </div>
                                 <div class="col-sm-12">
@@ -110,7 +117,7 @@
                                         <div class="form-field">
                                             <!--<label for="name">Name:</label>-->
                                             <input type="text" class="form-control" id="fname" placeholder="First name" name="fname">
-                                            <span class="form-icon"><img src="{{url('public/sites/images/name-icon.png')}}"></span>
+                                            <span class="form-icon"><img src="{{url('sites/images/name-icon.png')}}"></span>
                                             @if ($errors->has('fname'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('fname') }}</strong>
@@ -122,7 +129,7 @@
                                         <div class="form-field">
                                             <!--<label for="name">Name:</label>-->
                                             <input type="text" class="form-control" id="lname" placeholder="Last name" name="lname">
-                                            <span class="form-icon"><img src="{{url('public/sites/images/name-icon.png')}}"></span>
+                                            <span class="form-icon"><img src="{{url('sites/images/name-icon.png')}}"></span>
                                             @if ($errors->has('lname'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('lname') }}</strong>
@@ -137,7 +144,7 @@
                                 <div class="form-field">
                                     <!--<label for="email">Email:</label>-->
                                     <input type="email" class="form-control" id="email" placeholder="Email address" name="email" autocomplete="false">
-                                    <span class="form-icon"><img src="{{url('public/sites/images/email-icon.png')}}"></span>
+                                    <span class="form-icon"><img src="{{url('sites/images/email-icon.png')}}"></span>
                                     @if ($errors->has('email'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>
@@ -152,7 +159,7 @@
                                         <div class="form-field">
                                             <!--<label for="password">Password:</label>-->
                                             <input type="password" class="form-control" id="password" placeholder="Password" name="password">
-                                            <span class="form-icon showPwd"><img src="{{url('public/sites/images/pass-icon.png')}}"></span>
+                                            <span class="form-icon showPwd"><img src="{{url('sites/images/pass-icon.png')}}"></span>
                                             @if ($errors->has('password'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('password') }}</strong>
@@ -165,7 +172,7 @@
                                         <div class="form-field">
                                             <!--<label for="cpassword"> Confirm Password:</label>-->
                                             <input type="password" class="form-control" id="password_confirmation" placeholder="Confirm password" name="password_confirmation">
-                                            <span class="form-icon showCnfrmPwd"><img src="{{url('public/sites/images/pass-icon.png')}}"></span>
+                                            <span class="form-icon showCnfrmPwd"><img src="{{url('sites/images/pass-icon.png')}}"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -227,7 +234,8 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-12 loginbtn">
-                                        <button type="submit" id="btn_registration" class="btn btn-block btn-danger btn-lg " id="user-login-btn">Sign Up</button>
+                                        <button type="submit" id="btn_registration" class="btn btn-block btn-danger btn-lg " >Sign Up</button>
+
                                     </div>
                                     <div class="col-sm-12">                                        
                                         <hr class="bottom-line">
@@ -271,7 +279,7 @@
                                                                     </a>
                                 
                                                                     <a href='{{ url('/google-login') }}' class="btn-google">
-                                                                        <span class="icon-container g-icon"><img src="{{url('public/sites/images/google_icon.png')}}"></span>
+                                                                        <span class="icon-container g-icon"><img src="{{url('sites/images/google_icon.png')}}"></span>
                                                                         <span class="text-container">Log in with Google</span>
                                                                     </a>
                                 
@@ -295,7 +303,7 @@
                                             <div class="form-field">
 
                                                 <input type="email" class="form-control" name="username" id="username" placeholder="Email Address">
-                                                <span class="form-icon"><img src="{{url('public/sites/images/email-icon.png')}}"></span>
+                                                <span class="form-icon"><img src="{{url('sites/images/email-icon.png')}}"></span>
                                                 @if ($errors->has('email'))
                                                 <span class="help-block">
                                                     <strong>{{ $errors->first('email') }}</strong>
@@ -307,7 +315,7 @@
                                             <div class="form-field">
 
                                                 <input type="password" class="form-control" name="password" id="pwd" placeholder="Password">
-                                                <span class="form-icon showLoginPwd"><img src="{{url('public/sites/images/pass-icon.png')}}"></span>
+                                                <span class="form-icon showLoginPwd"><img src="{{url('sites/images/pass-icon.png')}}"></span>
                                                 @if ($errors->has('password'))
                                                 <span class="help-block">
                                                     <strong>{{ $errors->first('password') }}</strong>
@@ -362,7 +370,7 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-3 col-sm-6">
                             <div class="logo"> <a href="{{ url('/') }}">
-                                    <p>betting</p>
+                                    <p>betwelle</p>
                                 </a> </div>
                         </div>
 
@@ -374,8 +382,9 @@
                                         <!--                                        <li class="active"><a class="nav-link" href="#">Vegas</a></li>-->
                                         <!--<li><a class="nav-link" href="#">Results</a></li>-->
                                         <!--<li><a class="nav-link" href="#">Promotions</a></li>-->
-                                        <li><a class="nav-link" href="#">Help </a></li>
 
+                                        <li><a class="nav-link" href="#">Help </a></li>
+                                        <li><a href="<?php echo url('contactus') ?>">CONTACT US</a></li>
                                         @guest
                                         <li class="signup"><a class="btn" id="loginModal"> Log In</a></li>
                                         @if (Route::has('register'))
@@ -385,11 +394,17 @@
                                         @php
                                         $userDetails = getUserDetails();
                                         $name = explode(' ',$userDetails['name']);
+                                        $amt  = explode(' ',$userDetails['amt']);
                                         @endphp
-                                        <li><a class="nav-link" href="my-account">My Account</a></li>
+                                        <li><a href="{{url('/my-account')}}" id="buyTicket" class="buy">My Account</a></li>
 
-                                        <li ><a class="nav-link" href="#">Hello, {{$name[0]}}</a></li>
 
+                                        <li ><a class="nav-link" href="">Hello, {{$name[0]}}</a></li>
+                                        <li ><a class="nav-link" href="my-account">USD {{$amt[0]}}</a></li>
+
+
+                                        <button onclick="location.href ='{{ url('addfund') }}'" class="button">
+                                            Add Fund</button>
                                         <li class="signup">
                                             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -409,36 +424,47 @@
             </div>
         </header>
         @yield('content')
+        <?php // pr($menuDetails); ?>
         <div class="footer">
             <div class="container">
+                @if(!empty($menuDetails))
                 <div class="row">
-                    <div class="col-md-6 col-sm-12 item1"> <div class="logo"> <a href="#">
-                                <h2>betting</h2>
-                            </a> </div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <div class="col-md-6 col-sm-12 item1">
+                        @foreach($menuDetails as $menu)
+                        @if($menu['position'] == 'Left' && (empty($menu['parentid']) || $menu['parentid'] == 0) )
+                        <div class="logo"> 
+                            <a href="#">
+                                <h2>{{@$menu['title']}}</h2>
+                            </a> 
+                        </div>
+                        @endif
+
+                        @if($menu['position'] == 'Left' && (!empty($menu['parentid']) || $menu['parentid'] != 0))
+                        <p>{!! html_entity_decode(@$menu['menu_description']) !!}</p>
+                        @endif
+                        @endforeach
                     </div>
                     <div class="col-md-3 col-sm-12 item2">
-                        <h4>QUICK LINKS</h4>  
+                        @foreach($menuDetails as $menu)
+                        @if($menu['position'] == 'Middle' && (empty($menu['parentid']) || $menu['parentid'] == 0) )
+                        <h4>{{@$menu['title']}}</h4>  
+                        @endif
+                        @endforeach
                         <ul>
-                            <li><a href="#">VEGAS</a></li>
-                            <li><a href="#">RESULTS</a></li>
-                            <li><a href="#">PROMOTIONS</a></li>
-                            <li><a href="#">HELP</a></li>
-                            <li><a href="#">COMPANY</a></li>
+                            @foreach($menuDetails as $menu)
+                            @if($menu['position'] == 'Middle' && (!empty($menu['parentid']) || $menu['parentid'] != 0) )
+                            <li><a href="{{url('/').'/'.$menu['link']}}">{{$menu['title']}}</a></li>
+                            @endif
+                            @endforeach
                         </ul>
                     </div>
-                    <!--<div class="col-md-3 col-sm-12 item2">
-                      <h4>USER AREA</h4>
-                      <ul>
-                        <li><a href="#">My Account</a></li>
-                        <li><a href="#">My Cart</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Wishlist</a></li>
-                        <li><a href="#">Checkout</a></li>
-                      </ul>
-                    </div>-->
+
                     <div class="col-md-3 col-sm-12 item3">
-                        <h4>CONTACT INFO</h4>
+                        @foreach($menuDetails as $menu)
+                        @if($menu['position'] == 'Right' && (empty($menu['parentid']) || $menu['parentid'] == 0) )
+                        <h4>{{@$menu['title']}}</h4>  
+                        @endif
+                        @endforeach
                         <h3><span class="text-green"><i class="fa fa-phone" aria-hidden="true"></i>(000)</span> 123-4567</h3>
                         <p>549  Logan Lane, Denver, Colorado <br>80022</p>
 
@@ -452,6 +478,7 @@
 
                     </div>
                 </div>
+                @endif
             </div>
         </div>
         <div class="footerbottom">
@@ -468,13 +495,13 @@
             </div>
         </div>
 
-        <script src='{{ url('public/sites/js/jquery.min.js') }}'></script> 
-        <script src='{{ url('public/sites/js/owl.carousel.min.js') }}'></script> 
-        <!--<script  src="{{ url('public/sites/js/script.js') }}"></script>--> 
-        <script src="{{ url('public/sites/js/popper.min.js') }}"></script> 
-        <script src="{{ url('public/sites/js/bootstrap.min.js') }}"></script> 
+        <script src='{{ url('sites/js/jquery.min.js') }}'></script> 
+        <script src='{{ url('sites/js/owl.carousel.min.js') }}'></script> 
+        <!--<script  src="{{ url('sites/js/script.js') }}"></script>--> 
+        <script src="{{ url('sites/js/popper.min.js') }}"></script> 
+        <script src="{{ url('sites/js/bootstrap.min.js') }}"></script> 
         <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
-        <!--<script type="text/javascript" src="{{ url('public/sites/js/main.js') }}"></script>--> 
+        <!--<script type="text/javascript" src="{{ url('sites/js/main.js') }}"></script>--> 
         <script>
                                                         $(function(){
                                                         $(".dropdown").hover(
@@ -488,180 +515,177 @@
                                                                 $(this).toggleClass('open');
                                                                 $('b', this).toggleClass("caret caret-up");
                                                                 });
-                                                        });</script> 
-        <script>
-                    jQuery(".navbar-nav a").addClass('nav-link');</script>
+                                                        });
+                                                        jQuery(".navbar-nav a").addClass('nav-link');
+                                                        $(".signup_with_email").click(function () {
+                                                        //    $("#manualSignup").reset();
+                                                        $("#manualSignup").show();
+                                                        $("#socialSignup").hide();
+                                                        $('#SignUpModal').addClass('fixedModal');
+                                                        });
+                                                        $(".showPwd").on('click', function () {
+                                                        var input = $("#password");
+                                                        if (input.attr("type") === "password") {
+                                                        input.attr("type", "text");
+                                                        } else {
+                                                        input.attr("type", "password");
+                                                        }
 
-        <script>
-                    $(".signup_with_email").click(function () {
-                    //    $("#manualSignup").reset();
-                    $("#manualSignup").show();
-                    $("#socialSignup").hide();
-                    $('#SignUpModal').addClass('fixedModal');
-                    });
-                    $(".showPwd").on('click', function () {
-                    var input = $("#password");
-                    if (input.attr("type") === "password") {
-                    input.attr("type", "text");
-                    } else {
-                    input.attr("type", "password");
-                    }
+                                                        });
+                                                        $(".showCnfrmPwd").on('click', function () {
+                                                        var input = $("#password_confirmation");
+                                                        if (input.attr("type") === "password") {
+                                                        input.attr("type", "text");
+                                                        } else {
+                                                        input.attr("type", "password");
+                                                        }
 
-                    });
-                    $(".showCnfrmPwd").on('click', function () {
-                    var input = $("#password_confirmation");
-                    if (input.attr("type") === "password") {
-                    input.attr("type", "text");
-                    } else {
-                    input.attr("type", "password");
-                    }
+                                                        });
+                                                        $(".showLoginPwd").on('click', function () {
+                                                        var input = $("#pwd");
+                                                        if (input.attr("type") === "password") {
+                                                        input.attr("type", "text");
+                                                        } else {
+                                                        input.attr("type", "password");
+                                                        }
 
-                    });
-                    $(".showLoginPwd").on('click', function () {
-                    var input = $("#pwd");
-                    if (input.attr("type") === "password") {
-                    input.attr("type", "text");
-                    } else {
-                    input.attr("type", "password");
-                    }
+                                                        });
+                                                        function mailCheck() {
+                                                        $.ajax({
+                                                        url: "{{url('checkexistemail')}}",
+                                                                method: "POST",
+                                                                data: "email=" + value,
+                                                                dataType: "json",
+                                                                headers: {
+                                                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                                                },
+                                                                success: function (res) {
+                                                                return res.status == 'true'
+                                                                }
+                                                        });
+                                                        }
 
-                    });
-                    function mailCheck() {
-                    $.ajax({
-                    url: "{{url('checkexistemail')}}",
-                            method: "POST",
-                            data: "email=" + value,
-                            dataType: "json",
-                            headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                            },
-                            success: function (res) {
-                            return res.status == 'true'
-                            }
-                    });
-                    }
+                                                        $(document).ready(function () {
+                                                        // Initialize the functionality
+                                                        loginObj.init();
+                                                        $.validator.addMethod("validateEmail", function (value, element) {
+                                                        return this.optional(element) || /^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/i.test(value);
+                                                        }, "Email Address is invalid: Please enter a valid email address.");
+                                                        $.validator.addMethod("validatePassword", function (value, element) {
+                                                        return this.optional(element) || /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$/i.test(value);
+                                                        }, "Password is invalid: Please enter a valid password.");
+                                                        $.validator.addMethod("uniqueEmail", function (value, element) {
+                                                        $.ajax({
+                                                        url: "{{url('checkexistemail')}}",
+                                                                method: "POST",
+                                                                data: "email=" + value,
+                                                                dataType: "json",
+                                                                headers: {
+                                                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                                                },
+                                                                success: function (res) {
+                                                                return res.status == 'true'
+                                                                }
+                                                        });
+                                                        });
+                                                        });
+                                                        var loginObj = {
+                                                        init: function () {
+                                                        loginObj.holdFormSubmit();
+                                                        loginObj.formValidation();
+                                                        loginObj.loginFunction();
+                                                        },
+                                                                holdFormSubmit: function () {
+                                                                // Form validations
+                                                                $('#login_form').submit(function (e) {
+                                                                e.preventDefault();
+                                                                });
+                                                                },
+                                                                formValidation: function () {
+                                                                $('#login_form').validate({
+                                                                rules: {
+                                                                username: {
+                                                                required: true,
+                                                                        validateEmail: true,
+                                                                        email: true,
+                                                                },
+                                                                        password: {
+                                                                        required: {
+                                                                        depends: function () {
+                                                                        $(this).val($.trim($(this).val()));
+                                                                        return true;
+                                                                        }
+                                                                        },
+                                                                        }
 
-                    $(document).ready(function () {
-                    // Initialize the functionality
-                    loginObj.init();
-                    $.validator.addMethod("validateEmail", function (value, element) {
-                    return this.optional(element) || /^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/i.test(value);
-                    }, "Email Address is invalid: Please enter a valid email address.");
-                    $.validator.addMethod("validatePassword", function (value, element) {
-                    return this.optional(element) || /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}$/i.test(value);
-                    }, "Password is invalid: Please enter a valid password.");
-                    $.validator.addMethod("uniqueEmail", function (value, element) {
-                    $.ajax({
-                    url: "{{url('checkexistemail')}}",
-                            method: "POST",
-                            data: "email=" + value,
-                            dataType: "json",
-                            headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                            },
-                            success: function (res) {
-                            return res.status == 'true'
-                            }
-                    });
-                    });
-                    });
-                    var loginObj = {
-                    init: function () {
-                    loginObj.holdFormSubmit();
-                    loginObj.formValidation();
-                    loginObj.loginFunction();
-                    },
-                            holdFormSubmit: function () {
-                            // Form validations
-                            $('#login_form').submit(function (e) {
-                            e.preventDefault();
-                            });
-                            },
-                            formValidation: function () {
-                            $('#login_form').validate({
-                            rules: {
-                            username: {
-                            required: true,
-                                    validateEmail: true,
-                                    email: true,
-                            },
-                                    password: {
-                                    required: {
-                                    depends: function () {
-                                    $(this).val($.trim($(this).val()));
-                                    return true;
-                                    }
-                                    },
-                                    }
+                                                                },
+                                                                        messages: {
+                                                                        username: {
+                                                                        required: 'Please enter email address',
+                                                                                email: 'Please enter a valid email id',
+                                                                                validateEmail: 'Please enter a valid email id'
+                                                                        },
+                                                                                password: {
+                                                                                required: 'Please enter password',
+                                                                                },
+                                                                        }
+                                                                });
+                                                                },
+                                                                loginFunction: function () {
+                                                                // Login functionality
+                                                                $('#user-login-btn').click(function () {
+                                                                // Check the validation
+                                                                if ($('#login_form').valid()) {
+                                                                // Hold the button reference
+                                                                var btn = $(this);
+                                                                $('#server_resposne').hide();
+                                                                $('#server_resposne_msg').html('');
+                                                                var email = $("#username").val()
+                                                                        var password = $("#pwd").val()
 
-                            },
-                                    messages: {
-                                    username: {
-                                    required: 'Please enter email address',
-                                            email: 'Please enter a valid email id',
-                                            validateEmail: 'Please enter a valid email id'
-                                    },
-                                            password: {
-                                            required: 'Please enter password',
-                                            },
-                                    }
-                            });
-                            },
-                            loginFunction: function () {
-                            // Login functionality
-                            $('#user-login-btn').click(function () {
-                            // Check the validation
-                            if ($('#login_form').valid()) {
-                            // Hold the button reference
-                            var btn = $(this);
-                            $('#server_resposne').hide();
-                            $('#server_resposne_msg').html('');
-                            var email = $("#username").val()
-                                    var password = $("#pwd").val()
+                                                                        $.ajax({
+                                                                        url: "{{url('signin')}}",
+                                                                                method: 'post',
+                                                                                data: {
+                                                                                'email': email,
+                                                                                        'password': password
+                                                                                },
+                                                                                beforeSend: function () {
+                                                                                // Disable the button
+                                                                                $(btn).attr('disabled', true);
+                                                                                $('#loading_spinner').show();
+                                                                                },
+                                                                                headers: {
+                                                                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                                                                },
+                                                                                complete: function () {
+                                                                                // Enable the button
+                                                                                $(btn).attr('disabled', false);
+                                                                                $('#loading_spinner').hide();
+                                                                                },
+                                                                                success: function (response) {
+                                                                                console.log(response)
 
-                                    $.ajax({
-                                    url: "{{url('signin')}}",
-                                            method: 'post',
-                                            data: {
-                                            'email': email,
-                                                    'password': password
-                                            },
-                                            beforeSend: function () {
-                                            // Disable the button
-                                            $(btn).attr('disabled', true);
-                                            $('#loading_spinner').show();
-                                            },
-                                            headers: {
-                                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                                            },
-                                            complete: function () {
-                                            // Enable the button
-                                            $(btn).attr('disabled', false);
-                                            $('#loading_spinner').hide();
-                                            },
-                                            success: function (response) {
-                                            console.log(response)
-
-                                                    if (response.success) {
-                                            // Reset the form
-                                            $('#errMsg').show();
-                                            $('#login_form')[0].reset();
-                                            $('#errMsg').removeClass('alert-danger').addClass('alert-success');
-                                            $('#errMsg').html(response.message);
-                                            location.reload();
-                                            window.location.href = "{{url('/')}}"
-                                            } else {
-                                            $('#errMsg').removeClass('alert-success').addClass('alert-danger');
-                                            $('#errMsg').removeClass('alert-success').addClass('alert-danger');
-                                            $('#errMsg').html(response.message);
-                                            $('#errMsg').show();
-                                            }
-                                            }
-                                    });
-                            }
-                            });
-                            }
-                    }
+                                                                                        if (response.success) {
+                                                                                // Reset the form
+                                                                                $('#errMsg').show();
+                                                                                $('#login_form')[0].reset();
+                                                                                $('#errMsg').removeClass('alert-danger').addClass('alert-success');
+                                                                                $('#errMsg').html(response.message);
+                                                                                location.reload();
+                                                                                window.location.href = "{{url('/')}}";
+                                                                                } else {
+                                                                                $('#errMsg').removeClass('alert-success').addClass('alert-danger');
+                                                                                $('#errMsg').removeClass('alert-success').addClass('alert-danger');
+                                                                                $('#errMsg').html(response.message);
+                                                                                $('#errMsg').show();
+                                                                                }
+                                                                                }
+                                                                        });
+                                                                }
+                                                                });
+                                                                }
+                                                        }
         </script>
 
         <script>
@@ -805,7 +829,7 @@
                                             $('#server_resposne').removeClass('alert-danger').addClass('alert-success');
                                             $('#server_resposne_msg').html(response.resMsg);
                                             $('#server_resposne').show();
-//                                        location.reload();
+                                            location.reload();
 //                                        window.location.href("{{url('registration')}}");
                                             } else {
                                             $('#server_resposne').removeClass('alert-success').addClass('alert-danger');

@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Auth\Events\Registered;
+use App\Mail\WelcomeMail;
+use Illuminate\Support\Facades\Mail;
 
 class RegisterController extends Controller {
     /*
@@ -51,9 +53,7 @@ use RegistersUsers;
         return Validator::make($data, [
                     'fname' => ['required', 'string', 'max:255'],
                     'lname' => ['required', 'string', 'max:255'],
-//                    'city' => ['required', 'string', 'max:255'],
-//                    'state' => ['required', 'string', 'max:255'],
-//                    'country' => ['required', 'string', 'max:255'],
+             
                     'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
                     'dob' => ['required', 'string',  'max:255'],
                     'password' => ['required', 'string', 'min:8', 'confirmed'],
@@ -66,17 +66,17 @@ use RegistersUsers;
      * @param  array  $data
      * @return \App\User
      */
+	
     protected function create(array $data) {
-        // prd($data);
+         //prd($data);
         return User::create([
                     'fname' => $data['fname'],
                     'lname' => $data['lname'],
                     'name' => $data['fname'] . ' ' . $data['lname'],
                     'email' => $data['email'],
-                    'address' => @$data['address'],
-                    'city' => @$data['city'],
-                    'state' => @$data['state'],
-                    'country' => @$data['country'],
+                
+               
+                  
                     'dob' => @$data['dob'],
                     'password' => Hash::make($data['password']),
         ]);

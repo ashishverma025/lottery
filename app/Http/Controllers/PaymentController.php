@@ -30,7 +30,7 @@ class PaymentController extends Controller {
             } else {
                 $planExist = 'No';
             }
-            return view('sites.payment', ['active' => 'subscribe', 'bettingDetails' => $Betting, 'planExist' => $planExist]);
+            return view('sites.payment', ['active' => 'subscribe','bettingDetails' => $Betting, 'planExist' => $planExist]);
 
             if (!empty($plans)) {
                 if ($request->isMethod('get')) {
@@ -40,32 +40,6 @@ class PaymentController extends Controller {
             return redirect('/');
         }
         return redirect('/');
-    }
-
-    public function saveTransaction(Request $request) {
-        $postData = $request->all();
-        prd($postData);
-        $userDetails = getUserDetails();
-        if ($request->isMethod('post')) {
-            $sId = $postData['sId'];
-            $transDetails = $postData['details'];
-            $amount = $postData['amt'];
-
-            if (!empty($transDetails)) {
-                $currency = $postData['cur'];
-
-                $Payment = new Payment();
-                $Payment->user_id = $userDetails['id'];
-                $Payment->subscription_id = $sId;
-                $Payment->transaction_id = $transDetails['id'];
-                $Payment->amount = $amount;
-                $Payment->currency = $currency;
-                $Payment->payment_status = $transDetails['status'];
-                $Payment->transaction_time = $transDetails['create_time'];
-                $Payment->created_at = date('Y-m-d H:i:s');
-                $Payment->save();
-            }
-        }
     }
 
 }

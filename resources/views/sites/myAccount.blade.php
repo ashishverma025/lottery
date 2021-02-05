@@ -15,25 +15,38 @@
                     </div>
                     <div id="collapseThree3" class="collapse " role="tabpanel" aria-labelledby="headingThree3" data-parent="#accordionEx">
                         <div class="card-body editprofiledetails">							
-                            <form>
+                                <form action="{{url('editProfile')}}/{{@$userDetails['id']}}" method="post" enctype="multipart/form-data">
+                                    @csrf
                                 <div class="row">
                                     <div class="form-group col-md-6">
                                         <label>Profile Picture</label>
-                                        <img src="{{url('sites/images/default_profile_user_img.png')}}" class="profilepic" id="userImg" height="80" width="80" />
-                                        <input type="file" name="" onchange= "readURL(this, 'userImg')" value="Upload Picture"/>
+                                        <img src="{{@$userDetails['avatar']?asset('storage/uploads/sites/users').'/'.@$userDetails['avatar']:url('public/sites/images/default_profile_user_img.png')}}" class="profilepic" id="userImg" height="80" width="80" />
+                                        <input type="file" name="avatar" onchange= "readURL(this, 'userImg')" value="Upload Picture"/>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <div class="form-group col-md-12">
                                             <label>Name</label>
-                                            <input type="text" class="form-control" value="{{@$userDetails['name']}}" placeholder="Enter Name">
+                                            <input type="text" name="name" class="form-control" value="{{@$userDetails['name']}}" placeholder="Enter Name">
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label>Email</label>
-                                            <input type="email" class="form-control" value="{{@$userDetails['email']}}" placeholder="Email Id">
+                                            <input type="email" name="email" class="form-control" value="{{@$userDetails['email']}}" placeholder="Email Id">
                                         </div>
                                         <div class="form-group col-md-12">
                                             <label>Phone Number</label>
-                                            <input type="text" class="form-control" value="{{@$userDetails['phone']}}" placeholder="Enter Phone Number">
+                                            <input type="text" name="mobile_no" class="form-control" value="{{@$userDetails['phone']}}" placeholder="Enter Phone">
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <label>Gender</label>
+                                            <input type="text" name="gender" class="form-control" value="{{@$userDetails['gender']}}" placeholder="Enter Gender">
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <label>DOB</label>
+                                            <input type="text" name="dob" class="form-control" value="{{@$userDetails['dob']}}" placeholder="Enter DOB">
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <label>Address</label>
+                                            <input type="text" name="address" class="form-control" value="{{@$userDetails['address']}}" placeholder="Enter Address">
                                         </div>
                                     </div>
                                     <div class="form-group col-md-12 text-center">

@@ -9,6 +9,7 @@ use Illuminate\Auth\Middleware\EnsureEmailIsVerified;
 use Auth;
 use DB;
 use App\User;
+use App\Menu;
 use App\Betting;
 use App\Syllabuslist;
 
@@ -38,7 +39,7 @@ class BettingController extends Controller {
         $sortType = !empty($input['sSortDir_0']) ? $input['sSortDir_0'] : "DESC";
         $where = '';
         // Datatable column number to table column name mapping
-        $arr = ['id', 'bet_name','bet_date','start_date','end_date','betting_amount','betting_number','announce_winning_number', 'status'];
+        $arr = ['id', 'bet_name', 'bet_date', 'start_date', 'end_date', 'betting_amount', 'betting_number', 'announce_winning_number', 'status'];
         $sortBy = $arr[$col];
         // Get the records after applying the datatable filters
         $BettingDetails = Betting::where('user_id', 1);
@@ -67,15 +68,15 @@ class BettingController extends Controller {
                         . ' class="delete hidden-xs hidden-sm" title="Delete"'
                         . 'onclick=\'return confirm("Are you sure you want to delete this user?")\'>'
                         . '<i class="fa fa-trash text-danger"></i></a>';
-               
+
                 $awn = $inst->announce_winning_number;
-                $statusCls = ($awn == 'No'? 'danger':'success');
+                $statusCls = ($awn == 'No' ? 'danger' : 'success');
                 $announce_winning_number = ' <a href="announceWinningNumber/' . $inst->id . '"'
                         . ' class="delete hidden-xs hidden-sm" title="Announce Number"'
                         . 'onclick=\'return confirm("Are you sure you want to announce winning number?")\'>'
-                        . '<i class="fa fa-bullhorn text-'.$statusCls.'"></i> '.$awn.' </a>';
-                
-                $response['aaData'][$k] = [$k + 1, $inst->bet_name,$inst->bet_date,$inst->start_number,$inst->end_number,$inst->winning_amount,$status, $action];
+                        . '<i class="fa fa-bullhorn text-' . $statusCls . '"></i> ' . $awn . ' </a>';
+
+                $response['aaData'][$k] = [$k + 1, $inst->bet_name, $inst->bet_date, $inst->start_number, $inst->end_number, $inst->winning_amount, $status, $action];
                 $k++;
             }
         }
@@ -104,7 +105,7 @@ class BettingController extends Controller {
                 $betId = ($request->input('savebtn') == 'Update') ? $id : '';
                 $BettingDetails = ($request->input('savebtn') == 'Add') ? new Betting() : Betting::where(['id' => $betId])->first();
 
-                
+
                 $BettingDetails->bet_name = !empty($request->input('bet_name')) ? $request->input('bet_name') : $BettingDetails->bet_name;
                 $BettingDetails->bet_description = !empty($request->input('bet_description')) ? $request->input('bet_description') : $BettingDetails->bet_description;
                 $BettingDetails->bet_date = !empty($request->input('bet_date')) ? $request->input('bet_date') : $BettingDetails->bet_date;
@@ -115,7 +116,7 @@ class BettingController extends Controller {
 //                $BettingDetails->announce_winning_number = !empty($request->input('announce_winning_number')) ? $request->input('announce_winning_number') : $BettingDetails->announce_winning_number;
                 $BettingDetails->number_length = !empty($request->input('number_count')) ? $request->input('number_count') : $BettingDetails->number_count;
                 $BettingDetails->status = !empty($request->input('status')) ? $request->input('status') : $BettingDetails->status;
-                
+
 
                 if (($request->input('savebtn') == 'Add')) {
                     $BettingDetails->user_id = 1;
@@ -132,7 +133,6 @@ class BettingController extends Controller {
         }
         return redirect('/');
     }
-
 
     public function deleteBetting($id) {
         try {

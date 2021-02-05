@@ -2,15 +2,17 @@
 <!-- /.navbar -->
 @include('admin/includes.admin-sidebar')
 <!-- Content Wrapper. Contains page content -->
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#datepicker" ).datepicker();
-  });
-  </script>
+
+
+ <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>  
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>  
+   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script> 
+
+   <script type="text/javascript">
+       $(function() {
+               $("#datepicker").datepicker({ dateFormat: "yy-mm-dd" }).val()
+       });
+   </script>
 <div class="content-wrapper">
     @if(Session::has('message'))
     <p class="alert {{ Session::get('alert-class') }}">{{ Session::get('message') }}</p>
@@ -68,6 +70,9 @@
                             </div>
                         </div>
 
+				
+	
+		
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -110,8 +115,8 @@
                                 <div class="form-group">
                                     <label>Status</label>
                                     <select class="form-control" name="status" id="status">
-                                        <option <?= (@$BettingDetails->status == 'Active') ? 'selected' : '' ?>>Active</option>
-                                        <option <?= (@$BettingDetails->status == 'Inactive') ? 'selected' : '' ?>>Inactive</option>
+                                        <option <?= (@$BettingDetails->status == 'active') ? 'selected' : '' ?>>Active</option>
+                                        <option <?= (@$BettingDetails->status == 'inactive') ? 'selected' : '' ?>>Inactive</option>
                                     </select>  
                                 </div>
                             </div>
@@ -134,6 +139,21 @@
     </section>
     <!-- /.content -->
 </div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 <script src="https://adminlte.io/themes/AdminLTE/bower_components/ckeditor/ckeditor.js"></script>
 <script>
 $(function () {

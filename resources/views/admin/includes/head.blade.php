@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="{{ asset('admin/plugins/datatables-bs4/css/dataTables.bootstrap4.css') }}">
 <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Betwell Admin</title>
+        <title>Lottery Admin</title>
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="route" content="{{ url('/') }}">
         <!-- Tell the browser to be responsive to screen width -->

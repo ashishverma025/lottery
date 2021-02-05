@@ -10,10 +10,10 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
     </ol>
     <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active"> <img src="{{ asset('sites//images/banner.jpg') }}" alt=""> </div>
-        <div class="carousel-item"> <img src="{{ asset('sites//images/banner.jpg') }}" alt=""> </div>
-        <div class="carousel-item"> <img src="{{ asset('sites//images/banner.jpg') }}" alt=""> </div>
-        <div class="carousel-item"> <img src="{{ asset('sites//images/banner.jpg') }}" alt=""> </div>
+        <div class="carousel-item active"> <img src="{{ asset('sites/images/banner.jpg') }}" alt=""> </div>
+        <div class="carousel-item"> <img src="{{ asset('sites/images/banner.jpg') }}" alt=""> </div>
+        <div class="carousel-item"> <img src="{{ asset('sites/images/banner.jpg') }}" alt=""> </div>
+        <div class="carousel-item"> <img src="{{ asset('sites/images/banner.jpg') }}" alt=""> </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev"> <span class="fa fa-chevron-left btn-slide" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next"> <span class="fa fa-chevron-right btn-slide" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
 
@@ -25,7 +25,7 @@
             <div class="col-xl-4 col-lg-4 col-md-4">
                 <div class="card service_item bg-1">
                     <h3 class="sub-title-top">Lotto {{$bet['start_number']}}/{{$bet['end_number']}}</h3>
-                    <h2 class="title-main">{{$bet['bet_name']}} <span>USD {{$bet['winning_amount']}}</span> Million</h2>
+                    <h2 class="title-main">{{$bet['bet_name']}} <span>EUR {{$bet['winning_amount']}}</span> Million</h2>
                     <h4 class="sub-title-bottom">Daily Drow</h4>
                     @guest
                     <a href="#" id="loginModal" class="btn btn-primary btn-lg play-now-btn">Play Now</a> 
@@ -66,22 +66,23 @@
         </div>
         <div class="row">
             <div class="col-md-4 quickright">
-                <img src="{{ asset('sites//images/quickgameleft.jpg') }}"/>
+                <img src="{{ asset('sites/images/quickgameleft.jpg') }}"/>
             </div>
-            <div class="col-md-8 quickleft" style="background: url({{ asset('sites//images/back.jpg') }});">
+            <div class="col-md-8 quickleft" style="background: url({{ asset('sites/images/back.jpg') }});">
                 <div class="text">
                     <h2>Play Straight From M-Pesa</h2>
                     <span class="successMsg"></span>
                     <input type="text"  placeholder="5/39" class="form-control topscore"/>
                     <div class="mobile">
                         <select id="bet_id" name="bet_id" class="form-control col-md-6">
+                            <option value="" >Select Bet</option>
                             @if(!empty($betListDetail))
                             @foreach($betListDetail as $bet)
-                            <option value="{{$bet['id']}}">{{$bet['bet_name']}}</option>
+                            <option value="{{$bet['id']}}" data-betname="{{$bet['winning_amount']}}" >{{$bet['bet_name']}}</option>
                             @endforeach
                             @endif
 
-                        </select><!--
+                        </select><!-- 
                         <input type="text" class="form-control mobilenumber"/>
                         <select id="country"h name="country" class="form-control country">
                             <option value="+SAF">SAF</option>
@@ -101,14 +102,7 @@
                             <li class="singlevalue"><input type="text" name="num5" value="39" class="form-control single fifthcircle"/></li>
                         </ul>
                     </div>
-                    <input type="text" name="amount" placeholder="Enter your stake here Min USD 50 - Max USD 1000" class="form-control finaltext"/>
-                    @guest
-                    <input type="button" placeholder="Play now" id="loginModal" value="Play now" class="form-control lastbtn"/>
-                    @else
-                    <input type="button" placeholder="Play now" id="addbet" value="Play now" class="form-control lastbtn"/>
-                    @endguest
-                    <p class="lastpara">Enter 5 numbers from 1 to 39. Or select Random Picks</p>
-                </div>
+                    <input type="text" value="" style="width:33%;" name="amount" placeholder="EUR" class="form-control finaltext" readonly />
             </div>
         </div>
     </div>
@@ -128,29 +122,29 @@
                 <div class="row mx-0 w-100 h-100">
                     <div class="col-md-6 col-12 px-0 col-left">
                         <div class="lobby-game">
-                            <figure> <img src="{{ asset('sites//images/gallery-img1.jpg') }}" class="img-fluid" alt=""> </figure>
+                            <figure> <img src="{{ asset('sites/images/gallery-img1.jpg') }}" class="img-fluid" alt=""> </figure>
                         </div>
                     </div>
                     <div class="col-md-6 col-12 px-0 pt-0 col-right">
                         <div class="row mx-0">
                             <div  class="col-6 px-0 pl-2">
                                 <div  class="lobby-game img-wrap">
-                                    <figure> <img src="{{ asset('sites//images/gallery-img2.jpg') }}" class="img-fluid" alt=""> </figure>
+                                    <figure> <img src="{{ asset('sites/images/gallery-img2.jpg') }}" class="img-fluid" alt=""> </figure>
                                 </div>
                             </div>
                             <div class="col-6 px-0 pl-2">
                                 <div class="lobby-game img-wrap">
-                                    <figure> <img src="{{ asset('sites//images/gallery-img3.jpg') }}" class="img-fluid" alt=""> </figure>
+                                    <figure> <img src="{{ asset('sites/images/gallery-img3.jpg') }}" class="img-fluid" alt=""> </figure>
                                 </div>
                             </div>
                             <div class="col-6 px-0 pl-2">
                                 <div  class="lobby-game img-wrap">
-                                    <figure> <img src="{{ asset('sites//images/gallery-img4.jpg') }}" class="img-fluid" alt=""> </figure>
+                                    <figure> <img src="{{ asset('sites/images/gallery-img4.jpg') }}" class="img-fluid" alt=""> </figure>
                                 </div>
                             </div>
                             <div class="col-6 px-0 pl-2 ">
                                 <div  class="lobby-game img-wrap">
-                                    <figure> <img src="{{ asset('sites//images/gallery-img5.jpg') }}" class="img-fluid" alt=""> </figure>
+                                    <figure> <img src="{{ asset('sites/images/gallery-img5.jpg') }}" class="img-fluid" alt=""> </figure>
                                 </div>
                             </div>
                         </div>
@@ -168,7 +162,7 @@
     <div class="container">
         <div class="row px-md-5 px-1 year-impact-content pt-md-0 pt-4">
             <div class="col-lg-3 col-4 m-auto">
-                <div class="text-center"> <img alt="" class=" img-fluid year-impact-50-years" src="{{ asset('sites//images/50year-logo.png') }}"> </div>
+                <div class="text-center"> <img alt="" class=" img-fluid year-impact-50-years" src="{{ asset('sites/images/50year-logo.png') }}"> </div>
             </div>
             <div class="col-lg-4 my-auto col-8 px-md-0 px-4 pt-md-0 pt-2">
                 <div class="">
@@ -179,13 +173,11 @@
                 </div>
             </div>
             <div class="col-lg-4 col-12 m-auto">
-                <div class="web-year-impact-img text-center w-100"> <img alt="" class="web-year-impact-slides w-100" src="{{ asset('sites//images/pexels-photo-5792861.jpeg') }}"> </div>
+                <div class="web-year-impact-img text-center w-100"> <img alt="" class="web-year-impact-slides w-100" src="{{ asset('sites/images/pexels-photo-5792861.jpeg') }}"> </div>
             </div>
         </div>
     </div>
 </div>
-
-
 
 <!--- Block Artical --->
 
@@ -200,7 +192,7 @@
                     <div class="image">
                         <a href="#">
                             <figure>
-                                <img src="{{ asset('sites//images/article-img1.jpg') }}"  class="img-fluid" alt="">
+                                <img src="{{ asset('sites/images/article-img1.jpg') }}"  class="img-fluid" alt="">
                             </figure>
                         </a>
                     </div>
@@ -224,7 +216,7 @@
                     <div class="image">
                         <a href="#">
                             <figure>
-                                <img src="{{ asset('sites//images/article-img2.jpg') }}"  class="img-fluid" alt="">
+                                <img src="{{ asset('sites/images/article-img2.jpg') }}"  class="img-fluid" alt="">
                             </figure>
                         </a>
                     </div>
@@ -247,6 +239,11 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <script>
+$("#bet_id").change(function () {
+    var betAmount = $(this).find(':selected').attr('data-betname');
+    $("input[name=amount]").val('EUR '+betAmount)
+});
+
 $("#addbet").click(function () {
     var num1 = $("input[name=num1]").val()
     var num2 = $("input[name=num2]").val()
@@ -256,7 +253,7 @@ $("#addbet").click(function () {
     var amount = $("input[name=amount]").val()
     var bet_id = $("#bet_id").val()
 
-    if (num1 != '' && num2 != '' && num3 != '' && num4 != '' && num5 != '' && amount != '' && bet_id != '') {
+    if (num1 != '' && num2 != '' && num3 != '' && num4 != '' && num5 != '' && amount != 0 && bet_id != '' ) {
 
         $.ajax({
             url: "{{url('adduserBet')}}",
@@ -266,14 +263,14 @@ $("#addbet").click(function () {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             success: function (quickBetId) {
-                console.log(quickBetId+'quickBetId')
+                console.log(quickBetId + 'quickBetId')
                 if (quickBetId != '') {
                     localStorage.userBetId = quickBetId
                     $(".successMsg").html('Please proceed for payment.')
                 }
                 setTimeout(function () {
                     $(".successMsg").html('')
-                    window.location.href = "{{url('payment')}}/"+bet_id
+                    window.location.href = "{{url('payment')}}/" + bet_id
                 }, 3000);
             }
         });

@@ -35,8 +35,10 @@ Route::get('/my-account', 'WelcomeController@myAccount');
 Route::get('/bet-record', 'WelcomeController@betRecord');
 
 Auth::routes(['verify' => true]);
-
+Route::get('/contactus', 'SendEmailController@index');
+Route::post('/sendemail/send', 'SendEmailController@send');
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+
 Route::get("/homes", ["uses" => "HomeController@checkMD", "middleware" => "checkType:2"]);
 
 // Route::get('admin', 'HomeController@index')->name('admin');
@@ -92,6 +94,13 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function() {
     Route::get('/fetchBetting', 'BettingController@fetchBetting');
     Route::any('/addBetting/{id?}', 'BettingController@saveBetting');
     Route::any('/deleteBetting/{id?}', 'BettingController@deleteBetting');
+
+    /* Menu Route */
+    Route::any('/addMenu/{id?}', 'MenuController@addMenu');
+    Route::any('/menulist', 'MenuController@index');
+    Route::get('/fetchMenu', 'MenuController@fetchMenu');
+    Route::any('/deleteMenu/{id?}', 'MenuController@deleteMenu');
+
     Route::any('/announceWinningNumber/{id?}', 'BettingController@announceWinningNumber');
 
     /* Betting Result Management Route */
@@ -99,7 +108,7 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function() {
     Route::get('/fetchBettingResult', 'BettingResultController@fetchBetting');
     Route::any('/announceWinningNumber/{id?}', 'BettingResultController@announceWinningNumber');
     Route::any('/addWinningNumber/{id?}', 'BettingResultController@addWinningNumber');
-    
+
     Route::get('/quick-betting', 'QuickBettingController@index');
     Route::get('/fetchQuickBetting', 'QuickBettingController@fetchQuickBetting');
 
@@ -115,8 +124,6 @@ Route::prefix('/admin')->name('admin.')->namespace('Admin')->group(function() {
 /* ----------------------- Site Routes START -------------------------------- */
 
 /** Site Tutors/User Route(s) */
-Route::get('/becometutor', 'UsersController@becomeTutor');
-Route::post('/becomea_tutor', 'UsersController@becomeaTutor');
 Route::get('/editprofile/{id?}', 'UsersController@editprofile');
 Route::get('/userprofile', 'UsersController@viewProfile');
 Route::post('/changecoverbanner', 'UsersController@changeCoverBanner');
@@ -125,38 +132,16 @@ Route::post('/sendotp', 'UsersController@sendOtp');
 Route::post('/validateotp', 'UsersController@validateOtp');
 
 Route::post('/updateprofile', 'UsersController@updateProfile');
-Route::post('/getSubjectSyllabusListById', 'UsersController@getSubjectSyllabusListById');
-Route::get('becomeaeducation_partner/{type?}', 'UsersController@becomeaEducationPartner')->middleware('verified');
-Route::post('/learningcenter', 'UsersController@createLearningCenter');
-
-
-/* ----------------------- Online Practice -------------------------------- */
-Route::get("check-mw", ["uses" => "HomeController@checkMD", "middleware" => "checkType:2"]);
-Route::get('/email-verify/{id}/{LcId}', 'UsersController@emailverify');
-Route::get('/onlinePractice', 'StudentsController@onlinePractice');
-Route::get('/onlinePractice/{id}', 'StudentsController@onlinePractice');
-Route::post('/onlinePractice', 'StudentsController@onlinePractice');
-
-/* ----------------------- Online Exam -------------------------------- */
-
-Route::get('/onlineExam/step-1', 'OnlineExamController@Step1');
-Route::post('/onlineExam/start', 'OnlineExamController@index');
-Route::get('/onlineExam/start', 'OnlineExamController@index');
-//Route::get('/onlineExam/{id}','OnlineExamController@index');
-//Route::post('/onlineExam','OnlineExamController@index');
 
 /* -----------------------Frontend Ajax Routes ----------------------------------------- */
 Route::get('/checkmail', 'StudentsController@checkMail');
 Route::post('/checkexistemail', 'AjaxController@checkExistEmail');
 Route::post('/saveRecord', 'AjaxController@saveRecord');
-Route::post('/saveAnswered', 'AjaxController@saveAnswered');
-Route::post('/questionAttempt', 'AjaxController@questionAttempt');
-Route::post('/progressStatus', 'AjaxController@progressStatus');
-Route::post('/removeProgress', 'AjaxController@removeProgress');
 Route::get('/payment/{id}', 'PaymentController@Payment');
+Route::get('/addfund', 'AddFundController@addFund');
 Route::get('/subscribePlan/{id}', 'SubscribeController@subscribePlan');
 Route::post('/saveTransaction', 'AjaxController@saveTransaction');
-
+Route::post('/create/{id?}', 'PaymentAddController@insert');
 
 /* MOBILE VERIFICATION OTP SEND */
 Route::get('/sendopt', function() {

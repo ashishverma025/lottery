@@ -10,37 +10,37 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="route" content="{{ url('/') }}">
 
-        <link rel="stylesheet" href="{{ asset('public/student/plugins/fontawesome-free/css/all.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('student/plugins/fontawesome-free/css/all.min.css')}}">
         <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-        <link rel="stylesheet" href="{{ asset('public/student/plugins/daterangepicker/daterangepicker.css')}}">
-        <link rel="stylesheet" href="{{ asset('public/student/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
-        <link rel="stylesheet" href="{{ asset('public/student/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css')}}">
-        <link rel="stylesheet" href="{{ asset('public/student/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
-        <link rel="stylesheet" href="{{ asset('public/student/plugins/select2/css/select2.min.css')}}">
-        <link rel="stylesheet" href="{{ asset('public/student/dist/css/adminlte.min.css')}}">
-        <link rel="stylesheet" href="{{ asset('public/student/dist/css/custom.css')}}">
-        <link rel="stylesheet" href="{{ asset('public/student/plugins/ion-rangeslider/css/ion.rangeSlider.min.css')}}">
-        <link rel="stylesheet" href="{{ asset('public/student/plugins/bootstrap-slider/css/bootstrap-slider.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('student/plugins/daterangepicker/daterangepicker.css')}}">
+        <link rel="stylesheet" href="{{ asset('student/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('student/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('student/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('student/plugins/select2/css/select2.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('student/dist/css/adminlte.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('student/dist/css/custom.css')}}">
+        <link rel="stylesheet" href="{{ asset('student/plugins/ion-rangeslider/css/ion.rangeSlider.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('student/plugins/bootstrap-slider/css/bootstrap-slider.min.css')}}">
         <!--Duallistbox-->
-        <link rel="stylesheet" href="{{ asset('public/student/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css')}}">
-        <link rel="stylesheet" href="{{ asset('public/student/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('student/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('student/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css')}}">
         <!-- JQVMap -->
-        <link rel="stylesheet" href="{{asset('public/student/plugins/jqvmap/jqvmap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('student/plugins/jqvmap/jqvmap.min.css')}}">
         <!-- Theme style -->
         <!-- overlayScrollbars -->
-        <link rel="stylesheet" href="{{asset('public/student/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
+        <link rel="stylesheet" href="{{asset('student/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
         <!-- Daterange picker -->
         <!-- summernote -->
-        <link rel="stylesheet" href="{{asset('public/student/plugins/summernote/summernote-bs4.css')}}">
+        <link rel="stylesheet" href="{{asset('student/plugins/summernote/summernote-bs4.css')}}">
         <!-- Google Font: Source Sans Pro -->
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-        <script src="{{ asset('public/student/plugins/jquery/jquery.min.js')}}"></script>
+        <script src="{{ asset('student/plugins/jquery/jquery.min.js')}}"></script>
 
         
         
-        <link href="{{URL::asset('public/admn/css/select2.min.css')}}" rel="stylesheet">
-<link href="{{URL::asset('public/admn/css/plugincss/dataTables.bootstrap.css')}}" rel="stylesheet">
-<link href="{{URL::asset('public/admn/css/pages/tables.css')}}" rel="stylesheet">
+        <link href="{{URL::asset('admn/css/select2.min.css')}}" rel="stylesheet">
+<link href="{{URL::asset('admn/css/plugincss/dataTables.bootstrap.css')}}" rel="stylesheet">
+<link href="{{URL::asset('admn/css/pages/tables.css')}}" rel="stylesheet">
         <style>
             /*.errMsg{
                 color: red;
@@ -112,6 +112,8 @@
                             <a class="dropdown-item" href="{{url('admin/change_password')}}"><i class="fa fa-lock" style="color:graytext"></i>
                                 Change Password</a>
 
+                            {{-- <a class="dropdown-item" href="login2.html"><i class="fa fa-sign-out"></i>
+                                Log Out</a                                    > --}}
 
                                     @if(Auth::guard('admin')->check())
                                     <a class="dropdown-item" href="#" onclick="event.preventDefault();document.querySelector('#admin-logout-form').submit();"> <i class="fa fa-sign-out"></i>
